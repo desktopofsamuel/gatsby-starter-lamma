@@ -1,2 +1,0 @@
-webpackJsonp([73254467154745],{322:function(t,e){t.exports={data:{allMarkdownRemark:{totalCount:1,edges:[{node:{fields:{slug:"/big-sample-test",date:"2001-03-19T20:00:00.000Z"},excerpt:'NOTE: This "post" is based on  Markdown Cheatsheet  and is meant to test styling of Markdown generated documents. This is intended as a…',timeToRead:8,frontmatter:{title:"Big Test",tags:["test","huge"],cover:"https://unsplash.it/400/300/?random?BigTest",date:"01/03/2018"}}}]}},pathContext:{category:"moar"}}}});
-//# sourceMappingURL=path---categories-moar-ba3cc97c483e8aeef698.js.map
