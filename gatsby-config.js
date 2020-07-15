@@ -26,24 +26,23 @@ module.exports = {
         defaultLayouts: {
           // posts: require.resolve("./src/components/posts-layout.js"),
           default: require.resolve("./src/templates/default-page-layout.jsx"),
-          gatsbyRemarkPlugins: [
-            {
-              resolve: `gatsby-remark-relative-images`,
-            },
-            {
-              resolve: "gatsby-remark-images",
-              options: {
-                maxWidth: 690,
-              },
-            },
-            {
-              resolve: "gatsby-remark-responsive-iframe",
-            },
-            "gatsby-remark-copy-linked-files",
-            "gatsby-remark-autolink-headers",
-            "gatsby-remark-prismjs",
-          ],
         },
+        gatsbyRemarkPlugins: [
+          "gatsby-remark-autolink-headers",
+          {
+            resolve: `gatsby-remark-relative-images`,
+          },
+          {
+            resolve: "gatsby-remark-images",
+            options: {
+              maxWidth: 690,
+            },
+          },
+          "gatsby-remark-responsive-iframe",
+          "gatsby-remark-copy-linked-files",
+
+          "gatsby-remark-prismjs",
+        ],
       },
     },
     // {

@@ -18,6 +18,7 @@ export default class PostTemplate extends React.Component {
     const { data, pageContext } = this.props;
     const { slug } = pageContext;
     const postNode = data.mdx;
+    const tableofcontent = postNode.headings;
     const post = postNode.frontmatter;
     if (!post.id) {
       post.id = slug;
@@ -33,12 +34,13 @@ export default class PostTemplate extends React.Component {
           <div>
             <h1>{post.title}</h1>
             <MDXRenderer>{postNode.body}</MDXRenderer>
+            <pre>{JSON.stringify(tableofcontent, null, 2)}</pre>
             <div className="post-meta">
               <PostTags tags={post.tags} />
               <SocialLinks postPath={slug} postNode={postNode} />
             </div>
             <UserInfo config={config} />
-            <Disqus postNode={postNode} />
+            {/* <Disqus postNode={postNode} /> */}
             <Footer config={config} />
           </div>
         </div>
@@ -64,6 +66,10 @@ export const pageQuery = graphql`
       fields {
         slug
         date
+      }
+      headings {
+        depth
+        value
       }
     }
   }
