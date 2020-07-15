@@ -1,6 +1,7 @@
 {
     "extends": ["stylelint-config-standard",  "stylelint-config-prettier"],
     "rules": {
-        "indentation": 4
+        "indentation": 4,
+        "react/destructuring-assignment": "never"
     }
 }

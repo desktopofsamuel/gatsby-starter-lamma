@@ -35,7 +35,7 @@ class Listing extends React.Component {
   }
 
   render() {
-    const postEdges = this.props.data.allMarkdownRemark.edges;
+    const postEdges = this.props.data.allMdx.edges;
 
     return (
       <Layout>
@@ -57,7 +57,7 @@ export default Listing;
 /* eslint no-undef: "off" */
 export const listingQuery = graphql`
   query ListingQuery($skip: Int!, $limit: Int!) {
-    allMarkdownRemark(
+    allMdx(
       sort: { fields: [fields___date], order: DESC }
       limit: $limit
       skip: $skip

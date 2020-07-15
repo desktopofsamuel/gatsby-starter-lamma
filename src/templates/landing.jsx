@@ -8,7 +8,7 @@ import config from "../../data/SiteConfig";
 
 class Landing extends React.Component {
   render() {
-    const postEdges = this.props.data.allMarkdownRemark.edges;
+    const postEdges = this.props.data.allMdx.edges;
     return (
       <Layout>
         <div className="landing-container">
@@ -28,7 +28,7 @@ export default Landing;
 /* eslint no-undef: "off" */
 export const pageQuery = graphql`
   query LandingQuery {
-    allMarkdownRemark(sort: { fields: [fields___date], order: DESC }) {
+    allMdx(sort: { fields: [fields___date], order: DESC }) {
       edges {
         node {
           fields {

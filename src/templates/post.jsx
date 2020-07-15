@@ -1,6 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import { graphql } from "gatsby";
+import { MDXRenderer } from "gatsby-plugin-mdx";
 import Layout from "../layout";
 import UserInfo from "../components/UserInfo/UserInfo";
 import Disqus from "../components/Disqus/Disqus";
@@ -16,7 +17,7 @@ export default class PostTemplate extends React.Component {
   render() {
     const { data, pageContext } = this.props;
     const { slug } = pageContext;
-    const postNode = data.markdownRemark;
+    const postNode = data.mdx;
     const post = postNode.frontmatter;
     if (!post.id) {
       post.id = slug;
@@ -31,7 +32,7 @@ export default class PostTemplate extends React.Component {
           <SEO postPath={slug} postNode={postNode} postSEO />
           <div>
             <h1>{post.title}</h1>
-            <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
+            <MDXRenderer>{postNode.body}</MDXRenderer>
             <div className="post-meta">
               <PostTags tags={post.tags} />
               <SocialLinks postPath={slug} postNode={postNode} />
@@ -49,8 +50,8 @@ export default class PostTemplate extends React.Component {
 /* eslint no-undef: "off" */
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      html
+    mdx(fields: { slug: { eq: $slug } }) {
+      body
       timeToRead
       excerpt
       frontmatter {

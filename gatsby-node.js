@@ -8,7 +8,7 @@ const siteConfig = require("./data/SiteConfig");
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
   let slug;
-  if (node.internal.type === "MarkdownRemark") {
+  if (node.internal.type === "Mdx") {
     const fileNode = getNode(node.parent);
     const parsedFilePath = path.parse(fileNode.relativePath);
     if (
@@ -50,7 +50,7 @@ exports.createPages = async ({ graphql, actions }) => {
   // Get a full list of markdown posts
   const markdownQueryResult = await graphql(`
     {
-      allMarkdownRemark {
+      allMdx {
         edges {
           node {
             fields {
@@ -76,7 +76,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const tagSet = new Set();
   const categorySet = new Set();
 
-  const postsEdges = markdownQueryResult.data.allMarkdownRemark.edges;
+  const postsEdges = markdownQueryResult.data.allMdx.edges;
 
   // Sort posts
   postsEdges.sort((postA, postB) => {
@@ -109,15 +109,15 @@ exports.createPages = async ({ graphql, actions }) => {
           limit: postsPerPage,
           skip: pageNum * postsPerPage,
           pageCount,
-          currentPageNum: pageNum + 1
-        }
+          currentPageNum: pageNum + 1,
+        },
       });
     });
   } else {
     // Load the landing page instead
     createPage({
       path: `/`,
-      component: landingPage
+      component: landingPage,
     });
   }
 
@@ -125,7 +125,7 @@ exports.createPages = async ({ graphql, actions }) => {
   postsEdges.forEach((edge, index) => {
     // Generate a list of tags
     if (edge.node.frontmatter.tags) {
-      edge.node.frontmatter.tags.forEach(tag => {
+      edge.node.frontmatter.tags.forEach((tag) => {
         tagSet.add(tag);
       });
     }
@@ -149,26 +149,26 @@ exports.createPages = async ({ graphql, actions }) => {
         nexttitle: nextEdge.node.frontmatter.title,
         nextslug: nextEdge.node.fields.slug,
         prevtitle: prevEdge.node.frontmatter.title,
-        prevslug: prevEdge.node.fields.slug
-      }
+        prevslug: prevEdge.node.fields.slug,
+      },
     });
   });
 
   //  Create tag pages
-  tagSet.forEach(tag => {
+  tagSet.forEach((tag) => {
     createPage({
       path: `/tags/${_.kebabCase(tag)}/`,
       component: tagPage,
-      context: { tag }
+      context: { tag },
     });
   });
 
   // Create category pages
-  categorySet.forEach(category => {
+  categorySet.forEach((category) => {
     createPage({
       path: `/categories/${_.kebabCase(category)}/`,
       component: categoryPage,
-      context: { category }
+      context: { category },
     });
   });
 };

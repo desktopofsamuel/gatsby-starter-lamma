@@ -8,7 +8,7 @@ import config from "../../data/SiteConfig";
 export default class TagTemplate extends React.Component {
   render() {
     const { tag } = this.props.pageContext;
-    const postEdges = this.props.data.allMarkdownRemark.edges;
+    const postEdges = this.props.data.allMdx.edges;
     return (
       <Layout>
         <div className="tag-container">
@@ -23,7 +23,7 @@ export default class TagTemplate extends React.Component {
 /* eslint no-undef: "off" */
 export const pageQuery = graphql`
   query TagPage($tag: String) {
-    allMarkdownRemark(
+    allMdx(
       limit: 1000
       sort: { fields: [fields___date], order: DESC }
       filter: { frontmatter: { tags: { in: [$tag] } } }
