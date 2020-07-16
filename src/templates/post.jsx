@@ -9,6 +9,7 @@ import PostTags from "../components/PostTags/PostTags";
 import SocialLinks from "../components/SocialLinks/SocialLinks";
 import SEO from "../components/SEO/SEO";
 import Footer from "../components/Footer/Footer";
+import TableOfContent from "../components/TableOfContents/TableOfContents";
 import config from "../../data/SiteConfig";
 import "./b16-tomorrow-dark.css";
 import "./post.css";
@@ -18,7 +19,8 @@ export default class PostTemplate extends React.Component {
     const { data, pageContext } = this.props;
     const { slug } = pageContext;
     const postNode = data.mdx;
-    const tableofcontent = postNode.headings;
+    const headings = postNode.headings;
+    const toc = postNode.tableOfContents;
     const post = postNode.frontmatter;
     if (!post.id) {
       post.id = slug;
@@ -33,8 +35,8 @@ export default class PostTemplate extends React.Component {
           <SEO postPath={slug} postNode={postNode} postSEO />
           <div>
             <h1>{post.title}</h1>
+            <TableOfContent headings={headings} toc={toc} />
             <MDXRenderer>{postNode.body}</MDXRenderer>
-            <pre>{JSON.stringify(tableofcontent, null, 2)}</pre>
             <div className="post-meta">
               <PostTags tags={post.tags} />
               <SocialLinks postPath={slug} postNode={postNode} />
@@ -71,6 +73,7 @@ export const pageQuery = graphql`
         depth
         value
       }
+      tableOfContents
     }
   }
 `;
