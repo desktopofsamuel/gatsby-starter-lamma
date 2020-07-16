@@ -9,7 +9,7 @@ import PostTags from "../components/PostTags/PostTags";
 import SocialLinks from "../components/SocialLinks/SocialLinks";
 import SEO from "../components/SEO/SEO";
 import Footer from "../components/Footer/Footer";
-import TableOfContent from "../components/TableOfContents/TableOfContents";
+import TableOfContents from "../components/TableOfContents/TableOfContents";
 import config from "../../data/SiteConfig";
 import "./b16-tomorrow-dark.css";
 import "./post.css";
@@ -35,7 +35,7 @@ export default class PostTemplate extends React.Component {
           <SEO postPath={slug} postNode={postNode} postSEO />
           <div>
             <h1>{post.title}</h1>
-            <TableOfContent headings={headings} toc={toc} />
+            <TableOfContents headings={headings} toc={toc} />
             <MDXRenderer>{postNode.body}</MDXRenderer>
             <div className="post-meta">
               <PostTags tags={post.tags} />

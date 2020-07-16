@@ -1,15 +1,12 @@
 import React from "react";
-import styled from "styled-components";
-import TOCItem from "./TOCItem";
+import ContentList from "./ContentList";
 
-const Tableofcontentlist = styled.ul``;
+const TableOfContents = ({ toc }) => {
+  if (!toc.items) {
+    return null;
+  }
 
-export default ({ headings, toc }) => (
-  <div>
-    <Tableofcontentlist>
-      <TOCItem headings={headings} toc={toc} />
-    </Tableofcontentlist>
+  return <ContentList items={toc.items} />;
+};
 
-    <pre>{JSON.stringify(headings, null, 2)}</pre>
-  </div>
-);
+export default TableOfContents;
