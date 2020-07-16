@@ -2,6 +2,7 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import { graphql } from "gatsby";
 import { MDXRenderer } from "gatsby-plugin-mdx";
+import styled from "styled-components";
 import Layout from "../layout";
 import UserInfo from "../components/UserInfo/UserInfo";
 import Disqus from "../components/Disqus/Disqus";
@@ -13,6 +14,17 @@ import TableOfContents from "../components/TableOfContents/TableOfContents";
 import config from "../../data/SiteConfig";
 import "./b16-tomorrow-dark.css";
 import "./post.css";
+
+const Grid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 8px;
+  overflow: auto;
+`;
+
+const Container = styled.main`
+  grid-column: 3/11;
+`;
 
 export default class PostTemplate extends React.Component {
   render() {
@@ -28,14 +40,13 @@ export default class PostTemplate extends React.Component {
 
     return (
       <Layout>
-        <div>
-          <Helmet>
-            <title>{`${post.title} | ${config.siteTitle}`}</title>
-          </Helmet>
-          <SEO postPath={slug} postNode={postNode} postSEO />
-          <div>
+        <Helmet>
+          <title>{`${post.title} | ${config.siteTitle}`}</title>
+        </Helmet>
+        <SEO postPath={slug} postNode={postNode} postSEO />
+        <Grid>
+          <Container>
             <h1>{post.title}</h1>
-            <TableOfContents headings={headings} toc={toc} />
             <MDXRenderer>{postNode.body}</MDXRenderer>
             <div className="post-meta">
               <PostTags tags={post.tags} />
@@ -44,8 +55,9 @@ export default class PostTemplate extends React.Component {
             <UserInfo config={config} />
             {/* <Disqus postNode={postNode} /> */}
             <Footer config={config} />
-          </div>
-        </div>
+          </Container>
+          <TableOfContents headings={headings} toc={toc} />
+        </Grid>
       </Layout>
     );
   }
