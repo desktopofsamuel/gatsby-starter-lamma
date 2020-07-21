@@ -16,8 +16,13 @@ const Anchor = styled.a`
   font-size: ${(props) => (props.nested ? "12px" : "12px")};
   font-weight: ${(props) => (props.nested ? "regular" : "bolder")};
   color: ${(props) => (props.nested ? "lightgrey" : "darkgrey")};
-  opacity: ${(props) => (props.active ? "0" : "1")};
+  opacity: 0;
   transition: 0.3s all ease-in-out;
+  width: 140px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  text-decoration: none;
 `;
 
 const Container = styled.div`
