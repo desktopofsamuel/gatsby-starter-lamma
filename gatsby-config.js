@@ -25,7 +25,7 @@ module.exports = {
         extensions: [`.mdx`, `.md`],
         defaultLayouts: {
           // posts: require.resolve("./src/components/posts-layout.js"),
-          default: require.resolve("./src/templates/default-page-layout.jsx"),
+          default: require.resolve("./src/templates/default.jsx"),
         },
         gatsbyRemarkPlugins: [
           "gatsby-remark-autolink-headers",
