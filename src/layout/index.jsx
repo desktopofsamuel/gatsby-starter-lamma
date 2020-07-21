@@ -7,12 +7,11 @@ import "./index.css";
 const Body = styled.div`
   min-height: 100vh;
   max-width: 1280px;
-
   margin: 0 auto;
 
-  @media screen and (max-width: 480px) {
+  @media only screen and (max-width: 600px) {
     display: block;
-    margin: 0 16px;
+    margin: 0 24px;
   }
 `;
 

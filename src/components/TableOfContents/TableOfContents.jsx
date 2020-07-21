@@ -1,10 +1,19 @@
 import React from "react";
-import ContentList from "./ContentList";
 import styled from "styled-components";
+import ContentList from "./ContentList";
 
 const Position = styled.aside`
-  grid-column: 11 / 13;
-  height: 100%;
+  grid-area: aside;
+`;
+
+const Sticky = styled.div`
+  position: sticky;
+  top: 50%;
+  transform: translateY(-50%);
+
+  @media only screen and (max-width: 1280px) {
+    display: none;
+  }
 `;
 
 const TableOfContents = ({ toc }) => {
@@ -14,7 +23,9 @@ const TableOfContents = ({ toc }) => {
 
   return (
     <Position>
-      <ContentList items={toc.items} />
+      <Sticky>
+        <ContentList items={toc.items} />
+      </Sticky>
     </Position>
   );
 };

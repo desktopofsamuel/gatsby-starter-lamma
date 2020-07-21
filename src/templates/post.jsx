@@ -12,18 +12,25 @@ import SEO from "../components/SEO/SEO";
 import Footer from "../components/Footer/Footer";
 import TableOfContents from "../components/TableOfContents/TableOfContents";
 import config from "../../data/SiteConfig";
+
 import "./b16-tomorrow-dark.css";
 import "./post.css";
 
 const Grid = styled.div`
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-gap: 8px;
-  overflow: auto;
+  grid-template-columns: 2fr 8fr 2fr;
+  grid-template-areas: " . main aside";
+  gap: 48px;
+
+  @media only screen and (max-width: 600px) {
+    display: block;
+    margin: 0 16px;
+  }
 `;
 
 const Container = styled.main`
-  grid-column: 3/11;
+  grid-area: main;
+  overflow: hidden;
 `;
 
 export default class PostTemplate extends React.Component {
@@ -37,7 +44,6 @@ export default class PostTemplate extends React.Component {
     if (!post.id) {
       post.id = slug;
     }
-
     return (
       <Layout>
         <Helmet>
