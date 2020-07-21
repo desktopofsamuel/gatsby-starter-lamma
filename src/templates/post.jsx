@@ -11,6 +11,7 @@ import SocialLinks from "../components/SocialLinks/SocialLinks";
 import SEO from "../components/SEO/SEO";
 import Footer from "../components/Footer/Footer";
 import TableOfContents from "../components/TableOfContents/TableOfContents";
+import TOC2 from "../components/TableOfContents/TOC2";
 import config from "../../data/SiteConfig";
 
 import "./b16-tomorrow-dark.css";
@@ -63,6 +64,7 @@ export default class PostTemplate extends React.Component {
             <Footer config={config} />
           </Container>
           <TableOfContents headings={headings} toc={toc} />
+          <TOC2 />
         </Grid>
       </Layout>
     );
@@ -73,25 +75,7 @@ export default class PostTemplate extends React.Component {
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
     mdx(fields: { slug: { eq: $slug } }) {
-      body
-      timeToRead
-      excerpt
-      frontmatter {
-        title
-        cover
-        date
-        category
-        tags
-      }
-      fields {
-        slug
-        date
-      }
-      headings {
-        depth
-        value
-      }
-      tableOfContents
+      ...post
     }
   }
 `;
