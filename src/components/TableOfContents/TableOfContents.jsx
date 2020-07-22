@@ -3,16 +3,16 @@ import styled from "styled-components";
 import ContentList from "./ContentList";
 import mediaQuery from "../../utils/mediaQuery";
 
-const Position = styled.aside`
-  ${mediaQuery.maxMobile} {
-    display: none;
-  }
-`;
+const Position = styled.aside``;
 
 const Sticky = styled.div`
   position: sticky;
   top: 50%;
   transform: translateY(-50%);
+
+  ${mediaQuery.maxTablet} {
+    display: none;
+  }
 `;
 
 const TableOfContents = ({ toc }) => {
