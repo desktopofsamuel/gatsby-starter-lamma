@@ -1,19 +1,18 @@
 import React, { useRef, useState, useEffect } from "react";
 import styled from "styled-components";
 import ContentList from "./ContentList";
+import mediaQuery from "../../utils/mediaQuery";
 
 const Position = styled.aside`
-  grid-area: aside;
+  ${mediaQuery.maxMobile} {
+    display: none;
+  }
 `;
 
 const Sticky = styled.div`
   position: sticky;
   top: 50%;
   transform: translateY(-50%);
-
-  @media only screen and (max-width: 1280px) {
-    display: none;
-  }
 `;
 
 const TableOfContents = ({ toc }) => {

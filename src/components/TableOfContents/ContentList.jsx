@@ -18,7 +18,7 @@ const Anchor = styled.a`
   color: ${(props) => (props.nested ? "lightgrey" : "darkgrey")};
   opacity: 0;
   transition: 0.3s all ease-in-out;
-  width: 140px;
+  width: 10vw;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -31,6 +31,7 @@ const Container = styled.div`
   grid-auto-rows: auto;
   gap: 8px 16px;
   align-items: center;
+  transition: 0.3s all ease-in-out;
 
   &:hover ${Anchor} {
     color: darkgrey;
@@ -39,11 +40,18 @@ const Container = styled.div`
   &:hover ${Marker} {
     background-color: darkgrey;
   }
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &:hover + & {
+    transform: scale(1.025);
+  }
 `;
 
 const List = styled.div`
   padding-inline-start: 0;
-  margin: 4px 0;
 
   &:hover ${Anchor} {
     opacity: 1;

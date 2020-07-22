@@ -1,0 +1,24 @@
+/* Color Token */
+
+:root {
+  --color-primary: #12355b;
+  --color-secondary: #ff570a;
+  --color-background: #121212;
+  --color-primary-shades-100: #aacbee;
+  --color-primary-shades-300: #448cda;
+  --color-primary-shades-500: #1b5088;
+  --color-primary-shades-700: #0d2844;
+  --color-grey-shades-100: #f7f7f7;
+  --color-grey-shades-300: #bbb;
+  --color-grey-shades-500: #607d8b;
+  --color-grey-shades-700: #455a64;
+  --color-white-darker: #dadfe7;
+  --color-white: #f7f7f8;
+  --color-black: #212121;
+
+  /* Web Color */
+  --color-paragraph-text: var(--color-white-darker);
+  --color-link-text: var(--color-secondary);
+  --color-link-decoration: var(--color-secondary);
+  --color-heading: var(--color-primary-shades-700);
+}

@@ -13,24 +13,25 @@ import Footer from "../components/Footer/Footer";
 import TableOfContents from "../components/TableOfContents/TableOfContents";
 import TOC2 from "../components/TableOfContents/TOC2";
 import config from "../../data/SiteConfig";
+import mediaQuery from "../utils/mediaQuery";
 
 import "./b16-tomorrow-dark.css";
 import "./post.css";
 
 const Grid = styled.div`
   display: grid;
-  grid-template-columns: 2fr 8fr 2fr;
-  grid-template-areas: " . main aside";
+  grid-template-columns: minmax(100px, 2fr) 8fr minmax(100px, 2fr);
+  grid-auto-flow: column;
   gap: 48px;
 
-  @media only screen and (max-width: 600px) {
-    display: block;
+  ${mediaQuery.maxTablet} {
+    display: flex;
+    flex-direction: column;
     margin: 0 16px;
   }
 `;
 
 const Container = styled.main`
-  grid-area: main;
   overflow: hidden;
 `;
 
@@ -52,19 +53,19 @@ export default class PostTemplate extends React.Component {
         </Helmet>
         <SEO postPath={slug} postNode={postNode} postSEO />
         <Grid>
+          <SocialLinks postPath={slug} postNode={postNode} />
           <Container>
             <h1>{post.title}</h1>
             <MDXRenderer>{postNode.body}</MDXRenderer>
             <div className="post-meta">
               <PostTags tags={post.tags} />
-              <SocialLinks postPath={slug} postNode={postNode} />
             </div>
             <UserInfo config={config} />
             {/* <Disqus postNode={postNode} /> */}
             <Footer config={config} />
           </Container>
           <TableOfContents headings={headings} toc={toc} />
-          <TOC2 />
+          {/* <TOC2 /> */}
         </Grid>
       </Layout>
     );
