@@ -41,7 +41,7 @@ class SocialLinks extends Component {
     const { postNode, postPath, mobile } = this.props;
     const post = postNode.frontmatter;
     const url = urljoin(config.siteUrl, config.pathPrefix, postPath);
-    const iconSize = mobile ? 20 : 36;
+    const iconSize = mobile ? 24 : 36;
     const filter = (count) => (count > 0 ? count : "");
     const renderShareCount = (count) => (
       <div className="share-count">{filter(count)}</div>
@@ -54,16 +54,16 @@ class SocialLinks extends Component {
             <TwitterIcon
               round
               size={iconSize}
-              bgStyle={{ fill: "var(--color-grey-shades-100)" }}
-              iconFillColor="var(--color-grey-shades-300)"
+              bgStyle={{ fill: "var(--color-grey-shades-100-a)" }}
+              iconFillColor="var(--color-grey-shades-700)"
             />
           </TwitterShareButton>
           <FacebookShareButton url={url} quote={postNode.excerpt}>
             <FacebookIcon
               round
               size={iconSize}
-              bgStyle={{ fill: "#eee" }}
-              iconFillColor="#aaa"
+              bgStyle={{ fill: "var(--color-grey-shades-100-a)" }}
+              iconFillColor="var(--color-grey-shades-700)"
             />
             <FacebookShareCount url={url}>
               {(count) => renderShareCount(count)}
@@ -77,16 +77,16 @@ class SocialLinks extends Component {
             <LinkedinIcon
               round
               size={iconSize}
-              bgStyle={{ fill: "#eee" }}
-              iconFillColor="#aaa"
+              bgStyle={{ fill: "var(--color-grey-shades-100-a)" }}
+              iconFillColor="var(--color-grey-shades-700)"
             />
           </LinkedinShareButton>
           <TelegramShareButton url={url}>
             <TelegramIcon
               round
               size={iconSize}
-              bgStyle={{ fill: "#eee" }}
-              iconFillColor="#aaa"
+              bgStyle={{ fill: "var(--color-grey-shades-100-a)" }}
+              iconFillColor="var(--color-grey-shades-700)"
             />
           </TelegramShareButton>
         </Wrapper>

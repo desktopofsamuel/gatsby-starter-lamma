@@ -38,9 +38,21 @@ body {
 
 p, dl, ol, ul, pre, blockquote {
   color: var(--color-paragraph-text);
-
 }
 
+ul li::before {
+    content: "•";
+    margin: 0 .5rem 0 0;
+    color: var(--color-secondary);
+}
+
+ul li::marker {
+    content: none;
+}
+
+ol li::marker {
+  font-family: var(--font-tertiary);
+}
 
 main > p > a {
   color: var(--color-link-text);
