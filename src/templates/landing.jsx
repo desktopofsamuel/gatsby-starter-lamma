@@ -4,7 +4,7 @@ import { graphql } from "gatsby";
 import Layout from "../components/Layout/Layout";
 import PostListing from "../components/PostListing/PostListing";
 import SEO from "../components/SEO/SEO";
-import config from "../../data/SiteConfig";
+import config from "../../static/SiteConfig";
 
 class Landing extends React.Component {
   render() {

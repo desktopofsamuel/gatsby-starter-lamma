@@ -2,8 +2,10 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import styled from "styled-components";
 import { createGlobalStyle } from "styled-components";
-import config from "../../../data/SiteConfig";
+import config from "../../../static/SiteConfig";
 import "../../utils/styles";
+import mediaQuery from "../../utils/mediaQuery";
+import Footer from "../Footer/Footer";
 
 const GlobalStyle = createGlobalStyle`
 
@@ -59,19 +61,14 @@ main > p > a {
   border-bottom: 1px solid var(--color-link-decoration);
   text-decoration: none;
 }
-
-#___gatsby #gatsby-focus-wrapper {
-  min-height: 100vh;
-  min-width: 100vw;
-}
 `;
 
-const Body = styled.div`
+const Boxed = styled.div`
   min-height: 100vh;
   max-width: 1280px;
   margin: 0 auto;
 
-  @media only screen and (max-width: 600px) {
+  ${mediaQuery.maxMobile} {
     display: block;
     margin: 0 24px;
   }
@@ -79,13 +76,16 @@ const Body = styled.div`
 
 const LayoutTemplate = ({ children }) => {
   return (
-    <Body>
-      <GlobalStyle />
-      <Helmet>
-        <meta name="description" content={config.siteDescription} />
-      </Helmet>
-      {children}
-    </Body>
+    <>
+      <Boxed>
+        <GlobalStyle />
+        <Helmet>
+          <meta name="description" content={config.siteDescription} />
+        </Helmet>
+        {children}
+      </Boxed>
+      <Footer config={config} />
+    </>
   );
 };
 
@@ -93,5 +93,7 @@ export default LayoutTemplate;
 
 if (typeof window !== "undefined") {
   // eslint-disable-next-line global-require
-  require("smooth-scroll")('a[href*="#"]');
+  require("smooth-scroll")('a[href*="#"]', {
+    offset: 300,
+  });
 }

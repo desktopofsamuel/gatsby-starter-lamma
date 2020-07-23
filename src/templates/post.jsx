@@ -12,7 +12,7 @@ import SEO from "../components/SEO/SEO";
 import Footer from "../components/Footer/Footer";
 import TableOfContents from "../components/TableOfContents/TableOfContents";
 import TOC2 from "../components/TableOfContents/TOC2";
-import config from "../../data/SiteConfig";
+import config from "../../static/SiteConfig";
 import mediaQuery from "../utils/mediaQuery";
 
 import "./b16-tomorrow-dark.css";
@@ -27,7 +27,6 @@ const Grid = styled.div`
   ${mediaQuery.maxTablet} {
     display: flex;
     flex-direction: column;
-    margin: 0 16px;
   }
 `;
 
@@ -60,9 +59,7 @@ export default class PostTemplate extends React.Component {
             <div className="post-meta">
               <PostTags tags={post.tags} />
             </div>
-            <UserInfo config={config} />
             {/* <Disqus postNode={postNode} /> */}
-            <Footer config={config} />
           </Container>
           <TableOfContents headings={headings} toc={toc} />
           {/* <TOC2 /> */}

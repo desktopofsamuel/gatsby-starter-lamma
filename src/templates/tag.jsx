@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout/Layout";
 import PostListing from "../components/PostListing/PostListing";
-import config from "../../data/SiteConfig";
+import config from "../../static/SiteConfig";
 
 export default class TagTemplate extends React.Component {
   render() {

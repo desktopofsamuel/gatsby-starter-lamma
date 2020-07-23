@@ -21,6 +21,7 @@ const Anchor = styled.a`
       ? "var(--color-secondary-element-hover)"
       : "var(--color-secondary-element)"};
   opacity: 0;
+  margin-left: ${(props) => (props.nested ? "4px" : "0px")};
   transition: 0.3s all ease-in-out;
   width: 10vw;
   text-overflow: ellipsis;

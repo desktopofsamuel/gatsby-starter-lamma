@@ -138,7 +138,7 @@ npm run develop # or gatsby develop
 
 ## Configuration
 
-Edit the export object in `data/SiteConfig`:
+Edit the export object in `static/SiteConfig`:
 
 ```js
 module.exports = {

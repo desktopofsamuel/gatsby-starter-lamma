@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import _ from "lodash";
-import { Link } from "gatsby";
 import Tag from "../Tag/Tag";
 
 class PostTags extends Component {

@@ -12,7 +12,7 @@ import {
   LinkedinIcon,
 } from "react-share";
 import urljoin from "url-join";
-import config from "../../../data/SiteConfig";
+import config from "../../../static/SiteConfig";
 import "./SocialLinks.css";
 import "../../utils/styles";
 import mediaQuery from "../../utils/mediaQuery";
