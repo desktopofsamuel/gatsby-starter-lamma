@@ -1,7 +1,7 @@
 /* Color Token */
 
 :root {
-  --color-primary: #12355b;
+  --color-primary: #0039a6;
   --color-secondary: #ff570a;
   --color-background: #171717;
   /* --color-primary-shades-100: #aacbee;
@@ -12,7 +12,7 @@
   --color-grey-shades-100: #f7f7f7;
   --color-grey-shades-300: #dadfe7;
   --color-grey-shades-500: #bbbfcc;
-  /* --color-grey-shades-700: #9a9ea9; */
+  --color-grey-shades-700: #9a9ea9;
   --color-white: #f7f7f8;
   --color-black: #212121;
 }
