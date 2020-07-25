@@ -1,7 +1,7 @@
 const config = {
   siteTitle: "Gatsby Starter Lamma", // Site title.
   siteTitleShort: "GA Starter", // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.
-  siteTitleAlt: "GatsbyJS Advanced Starter", // Alternative site title for SEO.
+  siteTitleAlt: "Gatsby Starter Lamma", // Alternative site title for SEO.
   siteLogo: "/logos/logo-1024.png", // Logo used for SEO and manifest.
   siteUrl: "https://gatsby-advanced-starter-demo.netlify.com", // Domain of your website without pathPrefix.
   pathPrefix: "/", // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
@@ -13,7 +13,7 @@ const config = {
   disqusShortname: "https-vagr9k-github-io-gatsby-advanced-starter", // Disqus shortname.
   dateFromFormat: "YYYY-MM-DD", // Date format used in the frontmatter.
   dateFormat: "DD/MM/YYYY", // Date format for display.
-  postsPerPage: 4, // Amount of posts displayed per listing page.
+  postsPerPage: 6, // Amount of posts displayed per listing page.
   userName: "Advanced User", // Username to display in the author segment.
   userEmail: "AdvancedUser@example.com", // Email used for RSS feed's author segment
   userTwitter: "", // Optionally renders "Follow Me" in the UserInfo segment.
@@ -39,9 +39,19 @@ const config = {
       iconClassName: "fa fa-envelope",
     },
   ],
-  copyright: "Copyright © 2020. Advanced User", // Copyright string for the footer of the website and RSS feed.
+  copyright: "Copyright © 2020. Lamma People", // Copyright string for the footer of the website and RSS feed.
   themeColor: "#c62828", // Used for setting manifest and progress theme colors.
   backgroundColor: "#e0e0e0", // Used for setting manifest background color.
+  menu: [
+    {
+      label: "Home",
+      path: "/",
+    },
+    {
+      label: "About",
+      path: "/about",
+    },
+  ],
 };
 
 // Validate

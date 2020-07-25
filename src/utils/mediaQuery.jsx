@@ -5,7 +5,7 @@ const max = (width) => `only screen and (max-width: ${width}px)`;
 
 export const screens = {
   mobile: 425,
-  tablet: 600,
+  tablet: 768,
   laptop: 1440,
 };
 

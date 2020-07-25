@@ -2,8 +2,12 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import styled from "styled-components";
 import { createGlobalStyle } from "styled-components";
-import config from "../../../data/SiteConfig";
+import config from "../../../static/SiteConfig";
 import "../../utils/styles";
+import mediaQuery from "../../utils/mediaQuery";
+import Footer from "../Footer/Footer";
+import Container from "../Container/Container";
+import Navigation from "../Navigation/Navigation";
 
 const GlobalStyle = createGlobalStyle`
 
@@ -36,44 +40,31 @@ body {
   -webkit-font-smoothing: antialiased; 
 }
 
+#gatsby-focus-wrapper, #___gatsby {
+  height: 100%;
+  width: 100%;
+}
+
 p, dl, ol, ul, pre, blockquote {
   color: var(--color-paragraph-text);
-
 }
 
 
-main > p > a {
-  color: var(--color-link-text);
-  border-bottom: 1px solid var(--color-link-decoration);
-  text-decoration: none;
-}
-
-#___gatsby #gatsby-focus-wrapper {
-  min-height: 100vh;
-  min-width: 100vw;
-}
-`;
-
-const Body = styled.div`
-  min-height: 100vh;
-  max-width: 1280px;
-  margin: 0 auto;
-
-  @media only screen and (max-width: 600px) {
-    display: block;
-    margin: 0 24px;
-  }
 `;
 
 const LayoutTemplate = ({ children }) => {
   return (
-    <Body>
-      <GlobalStyle />
-      <Helmet>
-        <meta name="description" content={config.siteDescription} />
-      </Helmet>
-      {children}
-    </Body>
+    <>
+      <Navigation />
+      <Container>
+        <GlobalStyle />
+        <Helmet>
+          <meta name="description" content={config.siteDescription} />
+        </Helmet>
+        {children}
+      </Container>
+      <Footer config={config} />
+    </>
   );
 };
 
@@ -81,5 +72,7 @@ export default LayoutTemplate;
 
 if (typeof window !== "undefined") {
   // eslint-disable-next-line global-require
-  require("smooth-scroll")('a[href*="#"]');
+  require("smooth-scroll")('a[href*="#"]', {
+    offset: 300,
+  });
 }

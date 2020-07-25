@@ -1,35 +1,56 @@
 import React, { Component } from "react";
-import { Link } from "gatsby";
+import styled from "styled-components";
 import UserLinks from "../UserLinks/UserLinks";
-import "./Footer.css";
+import Container from "../Container/Container";
+import "../../utils/styles";
+
+const Contain = styled.footer`
+  justify-content: center;
+  align-content: center;
+  margin: 4rem 0 0 0;
+  padding: 1rem 0;
+  border-top: 1px solid var(--color-grey-shades-100-a);
+`;
+
+const Wrapper = styled.section`
+  padding: 0.5rem 0;
+`;
+
+const FooterMain = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  color: var(--color-secondary-element);
+
+  h4 {
+    margin: 0;
+    color: var(--color-heading);
+  }
+`;
 
 class Footer extends Component {
   render() {
     const { config } = this.props;
-    const url = config.siteRss;
     const { copyright } = config;
     if (!copyright) {
       return null;
     }
     return (
-      <footer className="footer">
-        <UserLinks config={config} labeled />
-        <div className="notice-container">
-          <h4>{copyright}</h4>
-
-          <Link to={url}>
-            <button>Subscribe</button>
-          </Link>
-          <h4>
-            Based on
-            {" "}
-            <a href="https://github.com/Vagr9K/gatsby-advanced-starter">
-              Gatsby Advanced Starter
-            </a>
-            .
-          </h4>
-        </div>
-      </footer>
+      <Contain>
+        <Container>
+          <Wrapper>
+            <FooterMain>
+              <Wrapper>
+                <h4>{config.siteTitle}</h4>
+                <small>{copyright}</small>
+              </Wrapper>
+              <UserLinks config={config} labeled />
+            </FooterMain>
+          </Wrapper>
+        </Container>
+      </Contain>
     );
   }
 }

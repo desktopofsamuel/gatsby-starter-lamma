@@ -2,7 +2,7 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import SEO from "../components/SEO/SEO";
 import Layout from "../components/Layout/Layout";
-import config from "../../data/SiteConfig";
+import config from "../../static/SiteConfig";
 
 const DefaultPageTemplate = ({ children, pageContext }) => {
   const { title } = pageContext.frontmatter;
