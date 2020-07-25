@@ -1,3 +1,8 @@
+a {
+  color: var(--color-heading);
+  text-decoration: none;
+}
+
 ul li::before {
   content: "•";
   margin: 0 0.5rem 0 0;

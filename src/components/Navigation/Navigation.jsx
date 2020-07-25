@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "gatsby";
 import Container from "../Container/Container";
 import config from "../../../static/SiteConfig";
 import MenuItem from "./MenuItem";
@@ -18,7 +19,9 @@ const Navigation = ({}) => {
     <header>
       <Container>
         <Wrapper>
-          <p>{title}</p>
+          <Link to="/">
+            <p>{title}</p>
+          </Link>
           <MenuItem menu={menu} />
         </Wrapper>
       </Container>
