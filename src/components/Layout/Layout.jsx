@@ -6,6 +6,7 @@ import config from "../../../static/SiteConfig";
 import "../../utils/styles";
 import mediaQuery from "../../utils/mediaQuery";
 import Footer from "../Footer/Footer";
+import Container from "../Container/Container";
 
 const GlobalStyle = createGlobalStyle`
 
@@ -38,52 +39,28 @@ body {
   -webkit-font-smoothing: antialiased; 
 }
 
+#gatsby-focus-wrapper, #___gatsby {
+  height: 100%;
+  width: 100%;
+}
+
 p, dl, ol, ul, pre, blockquote {
   color: var(--color-paragraph-text);
 }
 
-ul li::before {
-    content: "•";
-    margin: 0 .5rem 0 0;
-    color: var(--color-secondary);
-}
 
-ul li::marker {
-    content: none;
-}
-
-ol li::marker {
-  font-family: var(--font-tertiary);
-}
-
-main > p > a {
-  color: var(--color-link-text);
-  border-bottom: 1px solid var(--color-link-decoration);
-  text-decoration: none;
-}
-`;
-
-const Boxed = styled.div`
-  min-height: 100vh;
-  max-width: 1280px;
-  margin: 0 auto;
-
-  ${mediaQuery.maxMobile} {
-    display: block;
-    margin: 0 24px;
-  }
 `;
 
 const LayoutTemplate = ({ children }) => {
   return (
     <>
-      <Boxed>
+      <Container>
         <GlobalStyle />
         <Helmet>
           <meta name="description" content={config.siteDescription} />
         </Helmet>
         {children}
-      </Boxed>
+      </Container>
       <Footer config={config} />
     </>
   );

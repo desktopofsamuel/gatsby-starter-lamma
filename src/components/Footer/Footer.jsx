@@ -1,20 +1,10 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import UserLinks from "../UserLinks/UserLinks";
-import mediaQuery from "../../utils/mediaQuery";
+import Container from "../Container/Container";
 import "../../utils/styles";
 
-const Boxed = styled.div`
-  max-width: 1280px;
-  margin: 0 auto;
-
-  ${mediaQuery.maxMobile} {
-    display: block;
-    margin: 0 24px;
-  }
-`;
-
-const Container = styled.footer`
+const Contain = styled.footer`
   justify-content: center;
   align-content: center;
   margin: 4rem 0 0 0;
@@ -48,8 +38,8 @@ class Footer extends Component {
       return null;
     }
     return (
-      <Container>
-        <Boxed>
+      <Contain>
+        <Container>
           <Wrapper>
             <FooterMain>
               <Wrapper>
@@ -59,8 +49,8 @@ class Footer extends Component {
               <UserLinks config={config} labeled />
             </FooterMain>
           </Wrapper>
-        </Boxed>
-      </Container>
+        </Container>
+      </Contain>
     );
   }
 }

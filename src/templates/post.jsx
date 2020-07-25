@@ -20,9 +20,9 @@ import "./post.css";
 
 const Grid = styled.div`
   display: grid;
-  grid-template-columns: minmax(100px, 2fr) 8fr minmax(100px, 2fr);
+  grid-template-columns: minmax(50px, 1fr) 8fr minmax(50px, 1fr);
   grid-auto-flow: column;
-  gap: 48px;
+  gap: 5vw;
 
   ${mediaQuery.maxTablet} {
     display: flex;
@@ -32,6 +32,14 @@ const Grid = styled.div`
 
 const Container = styled.main`
   overflow: hidden;
+  max-width: 700px;
+  padding: 0 24px;
+  margin: 0 auto;
+
+  ${mediaQuery.maxMobile} {
+    display: block;
+    padding: 0 16px;
+  }
 `;
 
 export default class PostTemplate extends React.Component {
