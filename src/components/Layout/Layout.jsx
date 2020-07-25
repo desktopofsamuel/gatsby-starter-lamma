@@ -7,6 +7,7 @@ import "../../utils/styles";
 import mediaQuery from "../../utils/mediaQuery";
 import Footer from "../Footer/Footer";
 import Container from "../Container/Container";
+import Navigation from "../Navigation/Navigation";
 
 const GlobalStyle = createGlobalStyle`
 
@@ -54,6 +55,7 @@ p, dl, ol, ul, pre, blockquote {
 const LayoutTemplate = ({ children }) => {
   return (
     <>
+      <Navigation />
       <Container>
         <GlobalStyle />
         <Helmet>
