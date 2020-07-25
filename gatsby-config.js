@@ -1,5 +1,6 @@
 const urljoin = require("url-join");
 const path = require("path");
+const _ = require("lodash");
 const config = require("./static/SiteConfig");
 
 module.exports = {
@@ -36,12 +37,15 @@ module.exports = {
             resolve: "gatsby-remark-images",
             options: {
               maxWidth: 690,
+              showCaptions: true,
+              wrapperStyle: (fluidResult) =>
+                `flex:${_.round(fluidResult.aspectRatio, 2)};`,
             },
           },
           "gatsby-remark-responsive-iframe",
           "gatsby-remark-copy-linked-files",
-
           "gatsby-remark-prismjs",
+          "gatsby-remark-unwrap-images",
         ],
       },
     },
@@ -65,6 +69,13 @@ module.exports = {
       options: {
         name: "posts",
         path: `${__dirname}/content/`,
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "media",
+        path: `${__dirname}/static/media`,
       },
     },
     {

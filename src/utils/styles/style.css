@@ -1,7 +1,39 @@
+/* Link Style */
 a {
   color: var(--color-heading);
   text-decoration: none;
+  transition: var(--transition);
 }
+
+/* Remove Style for Footer & Header */
+header a {
+  border: none;
+  font-weight: var(--font-weight-regular);
+  border-bottom: none;
+}
+
+header a:hover {
+  border-bottom: none;
+}
+
+footer a {
+  border: none;
+  font-weight: var(--font-weight-regular);
+}
+
+/* Main Link Style */
+
+main > p > a {
+  font-style: italic;
+  font-weight: var(--font-weight-bold);
+  border-bottom: 2px solid var(--color-link-decoration);
+}
+
+main > p > a:hover {
+  border-bottom: 2px solid var(--color-link-decoration);
+}
+
+/* Ordered & Unordered List Style */
 
 ul li::before {
   content: "•";
@@ -17,13 +49,9 @@ ol li::marker {
   font-family: var(--font-tertiary);
 }
 
-main > p > a {
-  color: var(--color-link-text);
-  border-bottom: 1px solid var(--color-link-decoration);
-  text-decoration: none;
-}
-
 hr {
+  width: 20vw;
+  margin-left: 0;
   background: linear-gradient(
     to left,
     var(--color-grey-shades-100-a) 0%,
@@ -32,4 +60,38 @@ hr {
   outline: none;
   border: none;
   height: 2px;
+}
+
+/* Gatsby Image Figure */
+
+figure {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 3rem auto;
+}
+
+figcaption {
+  margin: 0.5rem 0;
+  font-style: italic;
+  color: var(--color-grey-shades-500);
+  font-size: var(--font-size-xs);
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 690px;
+}
+
+figcaption::before {
+  content: "—";
+  margin-right: 4px;
+  color: var(--color-grey-shades-500);
+}
+
+time {
+  color: var(--color-grey-shades-500);
+  font-size: var(--font-size-xs);
+  text-transform: uppercase;
+  letter-spacing: var(--font-small-letter-spacing);
 }

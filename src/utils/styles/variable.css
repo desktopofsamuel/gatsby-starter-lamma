@@ -1,0 +1,10 @@
+:root {
+  --color-paragraph-text: var(--color-grey-shades-300);
+  --color-link-text: var(--color-heading);
+  --color-link-decoration: var(--color-primary-shades-700);
+  --color-heading: var(--color-white);
+  --color-secondary-element: var(--color-grey-shades-500);
+  --color-secondary-element-hover: var(--color-grey-shades-300);
+
+  --transition: 0.2s all ease-in-out;
+}

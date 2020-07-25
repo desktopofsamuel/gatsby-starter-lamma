@@ -8,12 +8,12 @@ const Contain = styled.footer`
   justify-content: center;
   align-content: center;
   margin: 4rem 0 0 0;
-  padding: 2rem 0;
+  padding: 1rem 0;
   border-top: 1px solid var(--color-grey-shades-100-a);
 `;
 
 const Wrapper = styled.section`
-  padding: 1rem 0;
+  padding: 0.5rem 0;
 `;
 
 const FooterMain = styled.div`

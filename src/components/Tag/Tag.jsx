@@ -13,6 +13,7 @@ const Wrapper = styled(Link)`
   color: var(--color-grey-shades-700);
   border-radius: 8px;
   transition: 0.3s all ease-in-out;
+  border: none;
 
   &:not(last-child) {
     margin-right: 0.5rem;
@@ -25,6 +26,7 @@ const Wrapper = styled(Link)`
 
   &:hover {
     background-color: var(--color-grey-shades-100);
+    border: none;
   }
 `;
 
