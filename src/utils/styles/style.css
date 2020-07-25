@@ -1,0 +1,35 @@
+a {
+  color: var(--color-heading);
+  text-decoration: none;
+}
+
+ul li::before {
+  content: "•";
+  margin: 0 0.5rem 0 0;
+  color: var(--color-secondary);
+}
+
+ul li::marker {
+  content: none;
+}
+
+ol li::marker {
+  font-family: var(--font-tertiary);
+}
+
+main > p > a {
+  color: var(--color-link-text);
+  border-bottom: 1px solid var(--color-link-decoration);
+  text-decoration: none;
+}
+
+hr {
+  background: linear-gradient(
+    to left,
+    var(--color-grey-shades-100-a) 0%,
+    var(--color-grey-shades-300) 100%
+  );
+  outline: none;
+  border: none;
+  height: 2px;
+}

@@ -17,12 +17,12 @@ import "./SocialLinks.css";
 import "../../utils/styles";
 import mediaQuery from "../../utils/mediaQuery";
 
-const Container = styled.div`
+const Container = styled.aside`
   ${mediaQuery.maxTablet} {
     order: 2;
   }
 `;
-const Wrapper = styled.aside`
+const Wrapper = styled.div`
   position: sticky;
   top: 50%;
   transform: translateY(-50%);
