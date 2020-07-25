@@ -55,6 +55,9 @@ export default class PostTemplate extends React.Component {
           <SocialLinks postPath={slug} postNode={postNode} />
           <Container>
             <h1>{post.title}</h1>
+            <small>
+              <time>{post.date}</time>
+            </small>
             <MDXRenderer>{postNode.body}</MDXRenderer>
             <div className="post-meta">
               <PostTags tags={post.tags} />

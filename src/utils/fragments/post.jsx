@@ -8,7 +8,7 @@ export const query = graphql`
     frontmatter {
       title
       cover
-      date
+      date(formatString: "MMM DD, YYYY", locale: "en")
       category
       tags
     }
