@@ -3,10 +3,6 @@
 :root {
   --color-primary: #0039a6;
   --color-secondary: #ff570a;
-  --color-background: #171717;
-  /* --color-primary-shades-100: #aacbee;
-  --color-primary-shades-300: #448cda;
-  --color-primary-shades-500: #1b5088; */
   --color-primary-shades-700: #33444d;
   --color-grey-shades-100-a: rgba(247, 247, 247, 0.25);
   --color-grey-shades-100: #f7f7f7;
@@ -14,5 +10,26 @@
   --color-grey-shades-500: #bbbfcc;
   --color-grey-shades-700: #9a9ea9;
   --color-white: #f7f7f8;
-  --color-black: #212121;
+  --color-dark-background: #212121;
+  --color-light-background: #f7f7f7;
+}
+
+:root .dark-mode {
+  --color-background: var(--color-dark-background);
+  --color-link: var(--color-white);
+  --color-link-hover: var(--color-grey-shades-300);
+  --color-paragraph-text: var(--color-grey-shades-300);
+  --color-heading: var(--color-white);
+  --color-secondary-element: var(--color-grey-shades-500);
+  --color-secondary-element-hover: var(--color-grey-shades-300);
+}
+
+:root .light-mode {
+  --color-background: var(--color-light-background);
+  --color-link: var(--color-black);
+  --color-link-hover: var(--color-grey-shades-700);
+  --color-paragraph-text: var(--color-black);
+  --color-heading: var(--color-black);
+  --color-secondary-element: var(--color-grey-shades-500);
+  --color-secondary-element-hover: var(--color-grey-shades-300);
 }

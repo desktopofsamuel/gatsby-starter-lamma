@@ -14,9 +14,7 @@ import TableOfContents from "../components/TableOfContents/TableOfContents";
 import TOC2 from "../components/TableOfContents/TOC2";
 import config from "../../static/SiteConfig";
 import mediaQuery from "../utils/mediaQuery";
-
 import "./b16-tomorrow-dark.css";
-import "./post.css";
 
 const Grid = styled.div`
   display: grid;

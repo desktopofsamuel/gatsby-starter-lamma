@@ -1,10 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "gatsby";
+import DarkModeToggle from "./DarkModeToggle";
 
 const Container = styled.nav``;
 
-const MenuList = styled.ul``;
+const MenuList = styled.ul`
+  display: flex;
+`;
 
 const Item = styled(Link)`
   margin-right: 16px;
@@ -21,6 +24,7 @@ const MenuItem = ({ menu }) => {
             {item.label}
           </Item>
         ))}
+        <DarkModeToggle />
       </MenuList>
     </Container>
   );
