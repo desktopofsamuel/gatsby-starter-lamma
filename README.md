@@ -36,6 +36,10 @@
 
 A minimal styled blog based on [Gatsby Advancde Starter](https://github.com/Vagr9K/gatsby-advanced-starter).
 
+## Features 
+
+- Table Of Content component
+
 ## Lighthouse Audit Score
 
 <div align="center">
