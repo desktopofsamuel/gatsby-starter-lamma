@@ -4,32 +4,44 @@
   --color-primary: #0039a6;
   --color-secondary: #ff570a;
   --color-primary-shades-700: #33444d;
-  --color-grey-shades-100-a: rgba(247, 247, 247, 0.25);
-  --color-grey-shades-100: #f7f7f7;
-  --color-grey-shades-300: #dadfe7;
-  --color-grey-shades-500: #bbbfcc;
-  --color-grey-shades-700: #9a9ea9;
+  --color-light-grey-shades-100-a: rgba(0, 0, 0, 0.05);
+  --color-light-grey-shades-100: #ccc;
+  --color-light-grey-shades-300: #9ea0a5;
+  --color-light-grey-shades-500: #88919c;
+  --color-light-grey-shades-700: #444;
+  --color-dark-grey-shades-100-a: rgba(247, 247, 247, 0.25);
+  --color-dark-grey-shades-100: #f7f7f7;
+  --color-dark-grey-shades-300: #dadfe7;
+  --color-dark-grey-shades-500: #bbbfcc;
+  --color-dark-grey-shades-700: #9a9ea9;
   --color-white: #f7f7f8;
-  --color-dark-background: #212121;
+  --color-dark-background: #171717;
   --color-light-background: #f7f7f7;
+  --color-black: #212121;
 }
 
 :root .dark-mode {
   --color-background: var(--color-dark-background);
   --color-link: var(--color-white);
-  --color-link-hover: var(--color-grey-shades-300);
-  --color-paragraph-text: var(--color-grey-shades-300);
+  --color-link-hover: var(--color-dark-grey-shades-300);
+  --color-link-decoration: #33444d;
+  --color-paragraph-text: var(--color-dark-grey-shades-300);
   --color-heading: var(--color-white);
-  --color-secondary-element: var(--color-grey-shades-500);
-  --color-secondary-element-hover: var(--color-grey-shades-300);
+  --color-secondary-element: var(--color-dark-grey-shades-500);
+  --color-secondary-element-hover: var(--color-dark-grey-shades-300);
+  --color-secondary-background: var(--color-dark-grey-shades-100-a);
+  --color-border: var(--color-dark-grey-shades-100-a);
 }
 
 :root .light-mode {
   --color-background: var(--color-light-background);
   --color-link: var(--color-black);
-  --color-link-hover: var(--color-grey-shades-700);
-  --color-paragraph-text: var(--color-black);
+  --color-link-hover: var(--color-light-grey-shades-700);
+  --color-link-decoration: var(--color-light-grey-shades-100);
+  --color-paragraph-text: var(--color-light-grey-shades-700);
   --color-heading: var(--color-black);
-  --color-secondary-element: var(--color-grey-shades-500);
-  --color-secondary-element-hover: var(--color-grey-shades-300);
+  --color-secondary-element: var(--color-light-grey-shades-300);
+  --color-secondary-element-hover: var(--color-light-grey-shades-500);
+  --color-secondary-background: var(--color-light-grey-shades-100-a);
+  --color-border: var(--color-light-grey-shades-100-a);
 }

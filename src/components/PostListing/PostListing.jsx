@@ -5,14 +5,6 @@ import styled from "styled-components";
 const Article = styled(Link)`
   border-bottom: none;
   text-decoration: none;
-
-  h2 {
-    color: var(--color-heading);
-  }
-
-  p {
-    color: var(--color-paragraph-text);
-  }
 `;
 
 class PostListing extends React.Component {

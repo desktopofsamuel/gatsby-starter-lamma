@@ -9,7 +9,7 @@ const Contain = styled.footer`
   align-content: center;
   margin: 4rem 0 0 0;
   padding: 1rem 0;
-  border-top: 1px solid var(--color-grey-shades-100-a);
+  border-top: 1px solid var(--color-border);
 `;
 
 const Wrapper = styled.section`

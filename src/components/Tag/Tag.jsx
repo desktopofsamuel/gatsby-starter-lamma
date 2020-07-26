@@ -7,10 +7,10 @@ import "../../utils/styles";
 const Wrapper = styled(Link)`
   display: inline-block;
   flex-direction: column;
-  background-color: var(--color-grey-shades-100-a);
+  background-color: var(--color-secondary-background);
   padding: 0.3rem 0.75rem;
   text-decoration: none;
-  color: var(--color-grey-shades-700);
+  color: var(--color-secondary-element);
   border-radius: 8px;
   transition: 0.3s all ease-in-out;
   border: none;
@@ -25,7 +25,7 @@ const Wrapper = styled(Link)`
   }
 
   &:hover {
-    background-color: var(--color-grey-shades-100);
+    background-color: var(--color-secondary-element-hover);
     border: none;
   }
 `;
