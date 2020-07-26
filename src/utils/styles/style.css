@@ -1,3 +1,38 @@
+html {
+  height: 100%;
+  width: 100%;
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--font-base-line-height);
+  font-size: var(--font-size-base);
+  text-rendering: optimizeLegibility;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  box-sizing: border-box;
+  scroll-behavior: auto;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  min-width: 100%;
+  background-color: var(--color-background);
+  color: var(--color-paragraph-text);
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  transition: 0.7s all ease-in-out;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--color-heading);
+}
+
 /* Link Style */
 a {
   color: var(--color-heading);
