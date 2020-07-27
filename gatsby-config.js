@@ -1,6 +1,7 @@
 const urljoin = require("url-join");
 const path = require("path");
-const config = require("./data/SiteConfig");
+const _ = require("lodash");
+const config = require("./static/SiteConfig");
 
 module.exports = {
   pathPrefix: config.pathPrefix === "" ? "/" : config.pathPrefix,
@@ -11,10 +12,7 @@ module.exports = {
       feed_url: urljoin(config.siteUrl, config.pathPrefix, config.siteRss),
       title: config.siteTitle,
       description: config.siteDescription,
-      image_url: `${urljoin(
-        config.siteUrl,
-        config.pathPrefix
-      )}/logos/logo-512.png`,
+      image_url: `${urljoin(config.siteUrl, config.pathPrefix)}/favicon.png`,
       copyright: config.copyright,
     },
   },
@@ -36,12 +34,15 @@ module.exports = {
             resolve: "gatsby-remark-images",
             options: {
               maxWidth: 690,
+              showCaptions: true,
+              wrapperStyle: (fluidResult) =>
+                `flex:${_.round(fluidResult.aspectRatio, 2)};`,
             },
           },
           "gatsby-remark-responsive-iframe",
           "gatsby-remark-copy-linked-files",
-
           "gatsby-remark-prismjs",
+          "gatsby-remark-unwrap-images",
         ],
       },
     },
@@ -68,6 +69,13 @@ module.exports = {
       },
     },
     {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "media",
+        path: `${__dirname}/static/media`,
+      },
+    },
+    {
       resolve: "gatsby-plugin-google-analytics",
       options: {
         trackingId: config.googleAnalyticsID,
@@ -84,6 +92,7 @@ module.exports = {
     "gatsby-plugin-catch-links",
     "gatsby-plugin-twitter",
     "gatsby-plugin-sitemap",
+    "gatsby-plugin-use-dark-mode",
     {
       resolve: "gatsby-plugin-manifest",
       options: {
@@ -94,18 +103,7 @@ module.exports = {
         background_color: config.backgroundColor,
         theme_color: config.themeColor,
         display: "minimal-ui",
-        icons: [
-          {
-            src: "/logos/logo-192.png",
-            sizes: "192x192",
-            type: "image/png",
-          },
-          {
-            src: "/logos/logo-512.png",
-            sizes: "512x512",
-            type: "image/png",
-          },
-        ],
+        icon: "static/favicon.png",
       },
     },
     "gatsby-plugin-offline",

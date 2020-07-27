@@ -32,11 +32,13 @@
     </a>
 </div>
 
-# Gatsby Advanced Starter
+# Gatsby Starter Lamma
 
-A starter skeleton with advanced features for [Gatsby](https://github.com/gatsbyjs/gatsby/).
+A minimal styled blog based on [Gatsby Advancde Starter](https://github.com/Vagr9K/gatsby-advanced-starter).
 
-**NOTE**: This branch contains Gatsby v2 compatible version of the starter. To get the Gatsby v1 compatible version, use the [`v1`](https://github.com/Vagr9K/gatsby-advanced-starter/tree/v1) branch.
+## Features 
+
+- Table Of Content component
 
 ## Lighthouse Audit Score
 
@@ -140,7 +142,7 @@ npm run develop # or gatsby develop
 
 ## Configuration
 
-Edit the export object in `data/SiteConfig`:
+Edit the export object in `static/SiteConfig`:
 
 ```js
 module.exports = {
@@ -240,4 +242,4 @@ For NetlifyCMS specific issues visit the [official documentation](https://www.ne
 
 # Author
 
-Ruben Harutyunyan ([@Vagr9K](https://twitter.com/Vagr9K))
+Samuel Wong ([@desktopofsamuel](https://twitter.com/desktopofsamuel)) for Gatsby Starter Lamma, forked from Gatsby Advance Starter by Ruben Harutyunyan ([@Vagr9K](https://twitter.com/Vagr9K))

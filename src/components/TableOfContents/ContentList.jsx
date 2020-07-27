@@ -2,12 +2,13 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "gatsby";
 import PropTypes from "prop-types";
+import "../../utils/styles";
 
 const Marker = styled.span`
   width: ${(props) => (props.nested ? "12px" : "20px")};
   height: 6px;
   border-radius: 3px;
-  background-color: lightgrey;
+  background-color: var(--color-secondary-element);
   margin-right: 8px;
   transition: 0.3s all ease-in-out;
 `;
@@ -15,8 +16,12 @@ const Marker = styled.span`
 const Anchor = styled.a`
   font-size: ${(props) => (props.nested ? "12px" : "12px")};
   font-weight: ${(props) => (props.nested ? "regular" : "bolder")};
-  color: ${(props) => (props.nested ? "lightgrey" : "darkgrey")};
+  color: ${(props) =>
+    props.nested
+      ? "var(--color-secondary-element-hover)"
+      : "var(--color-secondary-element)"};
   opacity: 0;
+  margin-left: ${(props) => (props.nested ? "4px" : "0px")};
   transition: 0.3s all ease-in-out;
   width: 10vw;
   text-overflow: ellipsis;
@@ -34,11 +39,11 @@ const Container = styled.div`
   transition: 0.3s all ease-in-out;
 
   &:hover ${Anchor} {
-    color: darkgrey;
+    color: var(--color-secondary-element-hover);
   }
 
   &:hover ${Marker} {
-    background-color: darkgrey;
+    background-color: var(--color-secondary-element-hover);
   }
 
   &:hover {

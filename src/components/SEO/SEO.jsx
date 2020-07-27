@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Helmet } from "react-helmet";
 import urljoin from "url-join";
 import moment from "moment";
-import config from "../../../data/SiteConfig";
+import config from "../../../static/SiteConfig";
 
 class SEO extends Component {
   render() {
@@ -18,7 +18,7 @@ class SEO extends Component {
       description = postMeta.description
         ? postMeta.description
         : postNode.excerpt;
-      image = postMeta.cover;
+      image = postMeta.cover ? postMeta.cover : config.siteLogo;
       postURL = urljoin(config.siteUrl, config.pathPrefix, postPath);
     } else {
       title = config.siteTitle;
