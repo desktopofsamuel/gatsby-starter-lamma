@@ -14,6 +14,7 @@ const Wrapper = styled(Link)`
   border-radius: 8px;
   transition: 0.3s all ease-in-out;
   border: none;
+  margin-bottom: 0.5rem;
 
   &:not(last-child) {
     margin-right: 0.5rem;

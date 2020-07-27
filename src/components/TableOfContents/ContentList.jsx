@@ -16,10 +16,7 @@ const Marker = styled.span`
 const Anchor = styled.a`
   font-size: ${(props) => (props.nested ? "12px" : "12px")};
   font-weight: ${(props) => (props.nested ? "regular" : "bolder")};
-  color: ${(props) =>
-    props.nested
-      ? "var(--color-secondary-element-hover)"
-      : "var(--color-secondary-element)"};
+  color: var(--color-secondary-element-hover);
   opacity: 0;
   margin-left: ${(props) => (props.nested ? "4px" : "0px")};
   transition: 0.3s all ease-in-out;

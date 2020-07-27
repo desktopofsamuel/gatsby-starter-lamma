@@ -4,14 +4,22 @@ import styled from "styled-components";
 import Button from "../Button/Button";
 
 const Article = styled.article`
+  padding: 2rem 1rem 4rem 2rem;
   border-bottom: none;
   text-decoration: none;
+
+  &:not(:nth-child(2n)) {
+    border-right: 1px solid var(--color-border);
+  }
+
+  &:not(:nth-last-child(-n + 2)) {
+    border-bottom: 1px solid var(--color-border);
+  }
 `;
 
 const Grid = styled.section`
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 2rem 4rem;
+  grid-template-columns: repeat(2, 1fr);
 `;
 
 class PostListing extends React.Component {
