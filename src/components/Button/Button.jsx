@@ -5,7 +5,7 @@ import { Link } from "gatsby";
 import "../../utils/styles";
 
 const Wrapper = styled.a`
-  padding: 1rem 1.5rem;
+  padding: 16px 32px;
   font-size: var(--font-size-s);
   letter-spacing: var(--font-small-letter-spacing);
   text-transform: uppercase;

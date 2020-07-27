@@ -1,12 +1,19 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import { graphql, Link } from "gatsby";
+import styled from "styled-components";
 import Layout from "../components/Layout/Layout";
 import PostListing from "../components/PostListing/PostListing";
 import SEO from "../components/SEO/SEO";
 import config from "../../static/SiteConfig";
 import Hero from "../components/Hero/Hero";
-import "./listing.css";
+
+const Pagination = styled.section`
+  margin: 4rem 0;
+  min-width: 100%;
+  display: flex;
+  justify-content: space-between;
+`;
 
 class Listing extends React.Component {
   renderPaging() {
@@ -17,7 +24,7 @@ class Listing extends React.Component {
     const isLastPage = currentPageNum === pageCount;
 
     return (
-      <div className="paging-container">
+      <Pagination>
         {!isFirstPage && <Link to={prevPage}>Previous</Link>}
         {[...Array(pageCount)].map((_val, index) => {
           const pageNum = index + 1;
@@ -31,7 +38,7 @@ class Listing extends React.Component {
           );
         })}
         {!isLastPage && <Link to={nextPage}>Next</Link>}
-      </div>
+      </Pagination>
     );
   }
 

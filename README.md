@@ -1,17 +1,27 @@
-<div align="center" style="margin-bottom:30px">
-    <a href='https://github.com/vagr9k/gatsby-advanced-starter/blob/master/LICENSE'>
-    <img src="https://img.shields.io/github/license/vagr9k/gatsby-advanced-starter.svg" alt="Logo" />
-    </a>
-    <a href='https://github.com/vagr9k/gatsby-advanced-starter'>
-    <img src="https://img.shields.io/github/tag/vagr9k/gatsby-advanced-starter.svg" alt="Logo" />
-    </a>
-        <a href='https://github.com/vagr9k/gatsby-advanced-starter/stargazers'>
-    <img src="https://img.shields.io/github/stars/vagr9k/gatsby-advanced-starter.svg" alt="Logo" />
-    </a>
-        <a href="https://twitter.com/intent/tweet?text=A%20cool%20%40gatsbyjs%20starter%3A&url=https%3A%2F%2Fgithub.com%2FVagr9K%2Fgatsby-advanced-starter">
-    <img src="https://img.shields.io/twitter/url/https/github.com/vagr9k/gatsby-advanced-starter.svg?style=social" alt="Logo" />
-    </a>
-</div>
+# Gatsby Starter Lamma
+
+A minimal dark themed blog based on [Gatsby Advancde Starter](https://github.com/Vagr9K/gatsby-advanced-starter).
+
+## Features
+
+- MDX
+- Dark Mode (Implemented with CSS Variables with [gatsby-plugin-use-dark-mode](https://github.com/wKovacs64/gatsby-plugin-use-dark-mode) and [react-dark-mode-toggle](https://github.com/cawfree/react-dark-mode-toggle))
+- Subtle Table Of Content Component for every blog post
+-
+- <div align="center" style="margin-bottom:30px">
+      <a href='https://github.com/vagr9k/gatsby-advanced-starter/blob/master/LICENSE'>
+      <img src="https://img.shields.io/github/license/vagr9k/gatsby-advanced-starter.svg" alt="Logo" />
+      </a>
+      <a href='https://github.com/vagr9k/gatsby-advanced-starter'>
+      <img src="https://img.shields.io/github/tag/vagr9k/gatsby-advanced-starter.svg" alt="Logo" />
+      </a>
+          <a href='https://github.com/vagr9k/gatsby-advanced-starter/stargazers'>
+      <img src="https://img.shields.io/github/stars/vagr9k/gatsby-advanced-starter.svg" alt="Logo" />
+      </a>
+          <a href="https://twitter.com/intent/tweet?text=A%20cool%20%40gatsbyjs%20starter%3A&url=https%3A%2F%2Fgithub.com%2FVagr9K%2Fgatsby-advanced-starter">
+      <img src="https://img.shields.io/twitter/url/https/github.com/vagr9k/gatsby-advanced-starter.svg?style=social" alt="Logo" />
+      </a>
+  </div>
 
 <div align="center"  style="margin-bottom:30px">
     <img src="static/logos/logo-1024.png" alt="Logo" width='200px' height='200px'/>
@@ -31,14 +41,6 @@
       <img src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square" alt="Logo" />
     </a>
 </div>
-
-# Gatsby Starter Lamma
-
-A minimal styled blog based on [Gatsby Advancde Starter](https://github.com/Vagr9K/gatsby-advanced-starter).
-
-## Features 
-
-- Table Of Content component
 
 ## Lighthouse Audit Score
 
@@ -173,22 +175,22 @@ module.exports = {
     {
       label: "GitHub",
       url: "https://github.com/Vagr9K/gatsby-advanced-starter",
-      iconClassName: "fa fa-github"
+      iconClassName: "fa fa-github",
     },
     {
       label: "Twitter",
       url: "https://twitter.com/Vagr9K",
-      iconClassName: "fa fa-twitter"
+      iconClassName: "fa fa-twitter",
     },
     {
       label: "Email",
       url: "mailto:vagr9k@gmail.com",
-      iconClassName: "fa fa-envelope"
-    }
+      iconClassName: "fa fa-envelope",
+    },
   ],
   copyright: "Copyright © 2019. Advanced User", // Copyright string for the footer of the website and RSS feed.
   themeColor: "#c62828", // Used for setting manifest and progress theme colors.
-  backgroundColor: "#e0e0e0" // Used for setting manifest background color.
+  backgroundColor: "#e0e0e0", // Used for setting manifest background color.
 };
 ```
 
@@ -200,9 +202,9 @@ import CMS from "netlify-cms-app";
 CMS.init({
   config: {
     backend: {
-      name: "git-gateway"
-    }
-  }
+      name: "git-gateway",
+    },
+  },
 });
 ```
 
@@ -211,7 +213,7 @@ You can also optionally set `pathPrefix`:
 ```js
 module.exports = {
   // Note: it must *not* have a trailing slash.
-  pathPrefix: "/gatsby-advanced-starter" // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
+  pathPrefix: "/gatsby-advanced-starter", // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
 };
 ```
 
