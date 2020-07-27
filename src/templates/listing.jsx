@@ -70,7 +70,7 @@ export const listingQuery = graphql`
             slug
             date
           }
-          excerpt
+          excerpt(pruneLength: 150)
           timeToRead
           frontmatter {
             title

@@ -20,7 +20,7 @@
   --font-size-small: 16px;
   --font-base-line-height: 1.5;
   --font-scale-ratio: 1;
-  --font-small-letter-spacing: 0.5px;
+  --font-small-letter-spacing: 0.1em;
   --font-leading: cal(
     cal(16 * (var(--font-size-root) / 100)) * var(--font-base-line-height)
   );

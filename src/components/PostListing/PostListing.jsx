@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from "gatsby";
 import styled from "styled-components";
+import Button from "../Button/Button";
 
-const Article = styled(Link)`
+const Article = styled.article`
   border-bottom: none;
   text-decoration: none;
 
@@ -13,6 +14,12 @@ const Article = styled(Link)`
   p {
     color: var(--color-paragraph-text);
   }
+`;
+
+const Grid = styled.section`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem 4rem;
 `;
 
 class PostListing extends React.Component {
@@ -35,17 +42,18 @@ class PostListing extends React.Component {
   render() {
     const postList = this.getPostList();
     return (
-      <div>
+      <Grid>
         {
           /* Your post list here. */
           postList.map((post) => (
-            <Article to={post.path} key={post.title}>
+            <Article key={post.title}>
               <h2>{post.title}</h2>
               <p dangerouslySetInnerHTML={{ __html: post.excerpt }} />
+              <Button href={post.path} />
             </Article>
           ))
         }
-      </div>
+      </Grid>
     );
   }
 }
