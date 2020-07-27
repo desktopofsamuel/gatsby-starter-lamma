@@ -54,16 +54,16 @@ class SocialLinks extends Component {
             <TwitterIcon
               round
               size={iconSize}
-              bgStyle={{ fill: "var(--color-grey-shades-100-a)" }}
-              iconFillColor="var(--color-grey-shades-700)"
+              bgStyle={{ fill: "var(--color-secondary-background)" }}
+              iconFillColor="var(--color-secondary-element)"
             />
           </TwitterShareButton>
           <FacebookShareButton url={url} quote={postNode.excerpt}>
             <FacebookIcon
               round
               size={iconSize}
-              bgStyle={{ fill: "var(--color-grey-shades-100-a)" }}
-              iconFillColor="var(--color-grey-shades-700)"
+              bgStyle={{ fill: "var(--color-secondary-background)" }}
+              iconFillColor="var(--color-secondary-element)"
             />
             <FacebookShareCount url={url}>
               {(count) => renderShareCount(count)}
@@ -77,16 +77,16 @@ class SocialLinks extends Component {
             <LinkedinIcon
               round
               size={iconSize}
-              bgStyle={{ fill: "var(--color-grey-shades-100-a)" }}
-              iconFillColor="var(--color-grey-shades-700)"
+              bgStyle={{ fill: "var(--color-secondary-background)" }}
+              iconFillColor="var(--color-secondary-element)"
             />
           </LinkedinShareButton>
           <TelegramShareButton url={url}>
             <TelegramIcon
               round
               size={iconSize}
-              bgStyle={{ fill: "var(--color-grey-shades-100-a)" }}
-              iconFillColor="var(--color-grey-shades-700)"
+              bgStyle={{ fill: "var(--color-secondary-background)" }}
+              iconFillColor="var(--color-secondary-element)"
             />
           </TelegramShareButton>
         </Wrapper>

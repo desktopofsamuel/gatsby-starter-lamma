@@ -6,14 +6,6 @@ import Button from "../Button/Button";
 const Article = styled.article`
   border-bottom: none;
   text-decoration: none;
-
-  h2 {
-    color: var(--color-heading);
-  }
-
-  p {
-    color: var(--color-paragraph-text);
-  }
 `;
 
 const Grid = styled.section`

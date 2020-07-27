@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Link } from "gatsby";
 import Container from "../Container/Container";
 import config from "../../../static/SiteConfig";
-import MenuItem from "./MenuItem";
+import Menu from "./Menu";
 
 const Wrapper = styled.div`
   display: flex;
@@ -11,7 +11,7 @@ const Wrapper = styled.div`
   justify-content: space-between;
 `;
 
-const Navigation = ({}) => {
+const Navigation = () => {
   const { menu } = config;
   const title = config.siteTitle;
 
@@ -22,7 +22,7 @@ const Navigation = ({}) => {
           <Link to="/">
             <p>{title}</p>
           </Link>
-          <MenuItem menu={menu} />
+          <Menu menu={menu} />
         </Wrapper>
       </Container>
     </header>

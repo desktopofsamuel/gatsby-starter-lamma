@@ -21,7 +21,7 @@ body {
   color: var(--color-paragraph-text);
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  transition: 0.7s all ease-in-out;
+  transition: 1s all ease-in-out;
 }
 
 h1,
@@ -65,7 +65,7 @@ main > p > a {
 }
 
 main > p > a:hover {
-  border-bottom: 2px solid var(--color-link-decoration);
+  border-bottom: 2px solid var(--color-link);
 }
 
 /* Ordered & Unordered List Style */
