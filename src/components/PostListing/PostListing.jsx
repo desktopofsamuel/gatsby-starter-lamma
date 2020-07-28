@@ -4,9 +4,13 @@ import styled from "styled-components";
 import Button from "../Button/Button";
 
 const Article = styled.article`
-  padding: 2rem 1rem 4rem 2rem;
+  padding: 2rem 1rem 4rem 0rem;
   border-bottom: none;
   text-decoration: none;
+
+  &:nth-child(2n) {
+    padding-left: 2rem;
+  }
 
   &:not(:nth-child(2n)) {
     border-right: 1px solid var(--color-border);
