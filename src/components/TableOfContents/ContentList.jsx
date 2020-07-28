@@ -64,14 +64,16 @@ const ContentList = ({ items, nested, active }) => {
   return (
     <List>
       {items.map((item) => {
-        return (
-          <ContentItem
-            key={`${item.url}-item`}
-            item={item}
-            nested={nested}
-            active={active}
-          />
-        );
+        if (items.length > 1) {
+          return (
+            <ContentItem
+              key={`${item.url}-item`}
+              item={item}
+              nested={nested}
+              active={active}
+            />
+          );
+        }
       })}
     </List>
   );
