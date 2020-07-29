@@ -48,6 +48,12 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: `gatsby-remark-autolink-headers`,
+      options: {
+        icon: false,
+      },
+    },
     // {
     //   resolve: "gatsby-plugin-page-creator",
     //   options: {
