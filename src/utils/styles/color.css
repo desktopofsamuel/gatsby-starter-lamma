@@ -8,8 +8,8 @@
   --color-dark-primary-100: #263135;
   --color-light-grey-shades-100-a: rgba(0, 0, 0, 0.1);
   --color-light-grey-shades-100: #aaaaaa;
-  --color-light-grey-shades-300: #9ea0a5;
-  --color-light-grey-shades-500: #88919c;
+  --color-light-grey-shades-300: #88919c;
+  --color-light-grey-shades-500: #6d6d6d;
   --color-light-grey-shades-700: #444;
   --color-dark-grey-shades-100-a: rgba(247, 247, 247, 0.25);
   --color-dark-grey-shades-100: #f7f7f7;
@@ -48,8 +48,8 @@
   --color-link-decoration: var(--color-light-primary-100);
   --color-paragraph-text: var(--color-light-grey-shades-700);
   --color-heading: var(--color-black);
-  --color-secondary-element: var(--color-light-grey-shades-100);
-  --color-secondary-element-hover: var(--color-light-grey-shades-300);
+  --color-secondary-element: var(--color-light-grey-shades-500);
+  --color-secondary-element-hover: var(--color-light-grey-shades-100);
   --color-secondary-background: var(--color-light-grey-shades-100-a);
   --color-border: var(--color-light-grey-shades-100-a);
   --color-tag-background: var(--color-light-primary-100-a);

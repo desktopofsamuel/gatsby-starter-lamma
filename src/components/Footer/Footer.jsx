@@ -24,7 +24,9 @@ const FooterMain = styled.div`
   align-items: center;
   color: var(--color-secondary-element);
 
-  h4 {
+  p {
+    display: block;
+    font-weight: var(--font-weight-bold);
     margin: 0;
     color: var(--color-heading);
   }
@@ -43,7 +45,7 @@ class Footer extends Component {
           <Wrapper>
             <FooterMain>
               <Wrapper>
-                <h4>{config.siteTitle}</h4>
+                <p>{config.siteTitle}</p>
                 <small>{copyright}</small>
               </Wrapper>
               <UserLinks config={config} labeled />
