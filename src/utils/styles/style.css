@@ -22,6 +22,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   transition: 1s all ease-in-out;
+  transition-property: background-color, color, border-color;
 }
 
 h1,

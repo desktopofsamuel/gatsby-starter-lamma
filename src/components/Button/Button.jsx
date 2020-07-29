@@ -16,17 +16,22 @@ const Wrapper = styled(Link)`
   border: 1px var(--color-secondary-element) solid;
   font-weight: var(--font-weight-regular);
   font-size: var(--font-size-2xs);
+  p {
+    margin: 0;
+  }
 
   &:hover {
-    opacity: 0.5;
+    border: 1px var(--color-secondary-element-hover) solid;
   }
 `;
 
 const Button = ({ href, text, target }) => {
   return (
     <Wrapper to={href} target={target}>
-      {text}
-      {" →"}
+      <p>
+        {text}
+        {" →"}
+      </p>
     </Wrapper>
   );
 };
