@@ -8,7 +8,7 @@ const Marker = styled.span`
   width: ${(props) => (props.nested ? "12px" : "20px")};
   height: 6px;
   border-radius: 3px;
-  background-color: var(--color-secondary-element);
+  background-color: var(--color-secondary-background);
   margin-right: 8px;
   transition: 0.3s all ease-in-out;
 `;

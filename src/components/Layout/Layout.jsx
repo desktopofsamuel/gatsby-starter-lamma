@@ -33,6 +33,7 @@ const LayoutTemplate = ({ children }) => {
       <Container>
         <GlobalStyle />
         <Helmet>
+          <html lang="en" />
           <meta name="description" content={config.siteDescription} />
         </Helmet>
         {children}

@@ -3,10 +3,9 @@ import styled from "styled-components";
 import { Link } from "gatsby";
 import DarkModeToggle from "./DarkModeToggle";
 
-const Container = styled.nav``;
-
-const MenuList = styled.ul`
+const Container = styled.nav`
   display: flex;
+  align-items: center;
 `;
 
 const Item = styled(Link)`
@@ -18,14 +17,12 @@ const Item = styled(Link)`
 const MenuItem = ({ menu }) => {
   return (
     <Container>
-      <MenuList>
-        {menu.map((item) => (
-          <Item key={item.path} to={item.path}>
-            {item.label}
-          </Item>
-        ))}
-        <DarkModeToggle />
-      </MenuList>
+      {menu.map((item) => (
+        <Item key={item.path} to={item.path}>
+          {item.label}
+        </Item>
+      ))}
+      <DarkModeToggle />
     </Container>
   );
 };
