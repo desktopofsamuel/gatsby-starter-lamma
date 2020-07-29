@@ -2,7 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Link } from "gatsby";
-import "../../utils/styles";
 
 const Wrapper = styled(Link)`
   padding: 16px 32px;

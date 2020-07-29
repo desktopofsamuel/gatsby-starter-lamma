@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import kebabCase from "lodash/kebabCase";
 import { Link } from "gatsby";
-import "../../utils/styles";
 
 const Wrapper = styled(Link)`
   display: inline-block;

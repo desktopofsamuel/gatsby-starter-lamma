@@ -2,7 +2,6 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import { createGlobalStyle } from "styled-components";
 import config from "../../../static/SiteConfig";
-import "../../utils/styles";
 import Footer from "../Footer/Footer";
 import Container from "../Container/Container";
 import Navigation from "../Navigation/Navigation";
