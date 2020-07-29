@@ -26,7 +26,12 @@ module.exports = {
           default: require.resolve("./src/templates/default.jsx"),
         },
         gatsbyRemarkPlugins: [
-          "gatsby-remark-autolink-headers",
+          {
+            resolve: `gatsby-remark-autolink-headers`,
+            options: {
+              icon: false,
+            },
+          },
           {
             resolve: `gatsby-remark-relative-images`,
           },
@@ -35,8 +40,6 @@ module.exports = {
             options: {
               maxWidth: 690,
               showCaptions: true,
-              wrapperStyle: (fluidResult) =>
-                `flex:${_.round(fluidResult.aspectRatio, 2)};`,
             },
           },
           "gatsby-remark-responsive-iframe",
@@ -66,13 +69,6 @@ module.exports = {
       options: {
         name: "posts",
         path: `${__dirname}/content/`,
-      },
-    },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "media",
-        path: `${__dirname}/static/media`,
       },
     },
     {

@@ -73,7 +73,7 @@ main > p > a:hover {
 ul li::before {
   content: "•";
   margin: 0 0.5rem 0 0;
-  color: var(--color-secondary);
+  color: var(--color-primary);
 }
 
 ul li::marker {

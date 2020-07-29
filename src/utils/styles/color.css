@@ -1,9 +1,11 @@
 /* Color Token */
 
 :root {
-  --color-primary: #0039a6;
-  --color-secondary: #ff570a;
-  --color-primary-shades-700: #33444d;
+  --color-light-primary: #09c;
+  --color-dark-primary: #1f8aad;
+  --color-light-primary-100-a: #e5f9ff;
+  --color-light-primary-100: #a9d0dd;
+  --color-dark-primary-100: #263135;
   --color-light-grey-shades-100-a: rgba(0, 0, 0, 0.1);
   --color-light-grey-shades-100: #aaaaaa;
   --color-light-grey-shades-300: #9ea0a5;
@@ -21,27 +23,37 @@
 }
 
 :root .dark-mode {
+  --color-primary: var(--color-dark-primary);
   --color-background: var(--color-dark-background);
   --color-link: var(--color-white);
   --color-link-hover: var(--color-dark-grey-shades-300);
-  --color-link-decoration: #33444d;
+  --color-link-decoration: var(--color-dark-primary-100);
   --color-paragraph-text: var(--color-dark-grey-shades-300);
   --color-heading: var(--color-white);
   --color-secondary-element: var(--color-dark-grey-shades-500);
   --color-secondary-element-hover: var(--color-dark-grey-shades-300);
   --color-secondary-background: var(--color-dark-grey-shades-100-a);
   --color-border: var(--color-dark-grey-shades-100-a);
+  --color-tag-background: var(--color-dark-primary-100);
+  --color-tag-background-hover: var(--color-dark-primary);
+  --color-tag-label: var(--color-dark-primary);
+  --color-tag-label-hover: var(--color-white);
 }
 
 :root .light-mode {
+  --color-primary: var(--color-light-primary);
   --color-background: var(--color-light-background);
   --color-link: var(--color-black);
   --color-link-hover: var(--color-light-grey-shades-700);
-  --color-link-decoration: var(--color-light-grey-shades-100);
+  --color-link-decoration: var(--color-light-primary-100);
   --color-paragraph-text: var(--color-light-grey-shades-700);
   --color-heading: var(--color-black);
   --color-secondary-element: var(--color-light-grey-shades-100);
   --color-secondary-element-hover: var(--color-light-grey-shades-300);
   --color-secondary-background: var(--color-light-grey-shades-100-a);
   --color-border: var(--color-light-grey-shades-100-a);
+  --color-tag-background: var(--color-light-primary-100-a);
+  --color-tag-background-hover: var(--color-light-primary);
+  --color-tag-label: var(--color-light-primary);
+  --color-tag-label-hover: var(--color-white);
 }
