@@ -16,13 +16,9 @@ const Wrapper = styled.a`
   transition: var(--transition);
   border: 1px var(--color-secondary-element) solid;
 
-  h6 {
-    margin: 0;
-    font-weight: var(--font-weight-regular);
-  }
-
   span {
-    font-size: var(--font-size-s);
+    font-weight: var(--font-weight-regular);
+    font-size: var(--font-size-2xs);
     margin-left: 8px;
   }
 
@@ -35,7 +31,7 @@ const Button = ({ href, text, target }) => {
   return (
     <Link to={href} target={target}>
       <Wrapper>
-        <h6>{text} →</h6>
+        <span>{text} →</span>
       </Wrapper>
     </Link>
   );
