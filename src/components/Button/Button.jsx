@@ -2,9 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Link } from "gatsby";
-import "../../utils/styles";
 
-const Wrapper = styled.a`
+const Wrapper = styled(Link)`
   padding: 16px 32px;
   font-size: var(--font-size-s);
   letter-spacing: var(--font-small-letter-spacing);
@@ -15,12 +14,8 @@ const Wrapper = styled.a`
   align-items: center;
   transition: var(--transition);
   border: 1px var(--color-secondary-element) solid;
-
-  span {
-    font-weight: var(--font-weight-regular);
-    font-size: var(--font-size-2xs);
-    margin-left: 8px;
-  }
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-2xs);
 
   &:hover {
     opacity: 0.5;
@@ -29,11 +24,10 @@ const Wrapper = styled.a`
 
 const Button = ({ href, text, target }) => {
   return (
-    <Link to={href} target={target}>
-      <Wrapper>
-        <span>{text} →</span>
-      </Wrapper>
-    </Link>
+    <Wrapper to={href} target={target}>
+      {text}
+      {" →"}
+    </Wrapper>
   );
 };
 

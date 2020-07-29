@@ -1,8 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "gatsby";
 import PropTypes from "prop-types";
-import "../../utils/styles";
 
 const Marker = styled.span`
   width: ${(props) => (props.nested ? "12px" : "20px")};

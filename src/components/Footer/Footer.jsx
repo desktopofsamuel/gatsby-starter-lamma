@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import UserLinks from "../UserLinks/UserLinks";
 import Container from "../Container/Container";
-import "../../utils/styles";
 
 const Contain = styled.footer`
   justify-content: center;

@@ -1,6 +1,5 @@
 const urljoin = require("url-join");
 const path = require("path");
-const _ = require("lodash");
 const config = require("./static/SiteConfig");
 
 module.exports = {
