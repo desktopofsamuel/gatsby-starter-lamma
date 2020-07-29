@@ -7,7 +7,11 @@ A minimal dark themed blog based on [Gatsby Advancde Starter](https://github.com
 - MDX
 - Dark Mode (Implemented with CSS Variables with [gatsby-plugin-use-dark-mode](https://github.com/wKovacs64/gatsby-plugin-use-dark-mode) and [react-dark-mode-toggle](https://github.com/cawfree/react-dark-mode-toggle))
 - Subtle Table Of Content Component for every blog post
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b9974797-688a-4023-ae22-f10ad781b02b/deploy-status)](https://app.netlify.com/sites/gatsby-starter-lamma/deploys)
+
 -
+
 - <div align="center" style="margin-bottom:30px">
       <a href='https://github.com/vagr9k/gatsby-advanced-starter/blob/master/LICENSE'>
       <img src="https://img.shields.io/github/license/vagr9k/gatsby-advanced-starter.svg" alt="Logo" />
