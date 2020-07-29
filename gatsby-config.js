@@ -1,6 +1,5 @@
 const urljoin = require("url-join");
 const path = require("path");
-const _ = require("lodash");
 const config = require("./static/SiteConfig");
 
 module.exports = {
@@ -47,6 +46,12 @@ module.exports = {
           "gatsby-remark-prismjs",
           "gatsby-remark-unwrap-images",
         ],
+      },
+    },
+    {
+      resolve: `gatsby-remark-autolink-headers`,
+      options: {
+        icon: false,
       },
     },
     // {
