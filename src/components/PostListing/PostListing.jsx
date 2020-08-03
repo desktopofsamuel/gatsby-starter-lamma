@@ -1,28 +1,37 @@
 import React from "react";
 import styled from "styled-components";
 import Button from "../Button/Button";
+import mediaQuery from "../../utils/mediaQuery";
 
 const Article = styled.article`
-  padding: 2rem 1rem 4rem 0rem;
+  padding: 1rem 0;
   border-bottom: none;
   text-decoration: none;
 
-  &:nth-child(2n) {
-    padding-left: 2rem;
-  }
+  ${mediaQuery.minTablet} {
+    padding: 2rem 1rem 4rem 0rem;
 
-  &:not(:nth-child(2n)) {
-    border-right: 1px solid var(--color-border);
-  }
+    &:nth-child(2n) {
+      padding-left: 2rem;
+    }
 
-  &:not(:nth-last-child(-n + 2)) {
-    border-bottom: 1px solid var(--color-border);
+    &:not(:nth-child(2n)) {
+      border-right: 1px solid var(--color-border);
+    }
+
+    &:not(:nth-last-child(-n + 2)) {
+      border-bottom: 1px solid var(--color-border);
+    }
   }
 `;
 
 const Grid = styled.section`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: block;
+
+  ${mediaQuery.minTablet} {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 `;
 
 class PostListing extends React.Component {

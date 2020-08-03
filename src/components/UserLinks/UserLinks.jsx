@@ -12,14 +12,15 @@ const Wrapper = styled.div`
     text-decoration: none;
     border-bottom: 1px solid rgba(0, 0, 0, 0);
     transition: 0.3s all ease-in-out;
+    margin-right: 1rem;
   }
 
   & > *:hover {
     color: var(--color-secondary-element-hover);
     border-bottom: 1px solid var(--color-secondary-element-hover);
   }
-  & > *:not(last-child) {
-    margin-right: 1rem;
+  & > *:last-child {
+    margin-right: 0;
   }
 `;
 
