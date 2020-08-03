@@ -26,21 +26,18 @@ const config = {
     {
       label: "GitHub",
       url: "https://github.com/desktopofsamuel/gatsby-starter-lamma",
-      iconClassName: "fa fa-github",
     },
     {
       label: "Twitter",
       url: "https://twitter.com/desktopofsamuel",
-      iconClassName: "fa fa-twitter",
     },
     {
       label: "Email",
       url: "mailto:desktopofsamuel@gmail.com",
-      iconClassName: "fa fa-envelope",
     },
   ],
   copyright: "Copyright © 2020. Lamma People", // Copyright string for the footer of the website and RSS feed.
-  themeColor: "#c62828", // Used for setting manifest and progress theme colors.
+  themeColor: "#09c", // Used for setting manifest and progress theme colors.
   backgroundColor: "#e0e0e0", // Used for setting manifest background color.
   menu: [
     {

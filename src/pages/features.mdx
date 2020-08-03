@@ -2,19 +2,17 @@
 title: "Features"
 ---
 
-## Introduction
-
-This starter is based on [Gatsby Advance Starter](https://github.com/Vagr9K/gatsby-advanced-starter) and further develop into a separate starter with custom basic features. This is the first attempt for me contributing to the community, so please let me know if there are anythings that can be improved.
-
-This starter would be a great place to start if you are looking for a clean and minimal blog setup, at the same time following the latest design trend with Dark Mode, supporting latest Gatsby features. Moderate code editing will be required in order to launch the site.
-
 ## Features
 
 ### Dark Mode
 
-Dark Mode using [`gatsby-plugin-use-dark-mode`](https://github.com/wKovacs64/gatsby-plugin-use-dark-mode) and [`react-toggle-dark-mode`](https://www.npmjs.com/package/react-dark-mode-toggle). This starter use `styled-components` but the color tokens have been implemented by simple CSS variables method.
+Dark Mode using [`gatsby-plugin-use-dark-mode`](https://github.com/wKovacs64/gatsby-plugin-use-dark-mode) and [`react-toggle-dark-mode`](https://www.npmjs.com/package/react-dark-mode-toggle).
 
-I have also spend a long time on nailing the light / dark color scheme together with the component style, so feel free to use it as well. Color Tokens can be found in `src/utils/styles/color.css`.
+### CSS variables
+
+Existing styles in this website are implemented with the simplest setup, CSS Variables injected globally at `gatsby-browser.js`. All color styles have already compartmentalised for easier updating color. Color tokens can be found in `src/utils/styles/color.css`.
+
+Components are created using `styled-components` together with a `mediaQuery` function for a standard breakpoints.
 
 ### MDX
 

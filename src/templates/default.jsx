@@ -15,8 +15,7 @@ const DefaultPageTemplate = ({ children, pageContext }) => {
         <meta name="twitter:title" content={`${title} | ${config.siteTitle}`} />
         <meta property="og:title" content={`${title} | ${config.siteTitle}`} />
       </Helmet>
-
-      {children}
+      <main>{children}</main>
     </Layout>
   );
 };
