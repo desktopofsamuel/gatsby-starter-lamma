@@ -93,7 +93,12 @@ module.exports = {
     "gatsby-plugin-catch-links",
     "gatsby-plugin-twitter",
     "gatsby-plugin-sitemap",
-    "gatsby-plugin-use-dark-mode",
+    {
+      resolve: "gatsby-plugin-use-dark-mode",
+      options: {
+        minify: true,
+      },
+    },
     {
       resolve: "gatsby-plugin-manifest",
       options: {

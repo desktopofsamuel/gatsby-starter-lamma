@@ -95,6 +95,14 @@
     ]
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  }
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/desktopofsamuel/gatsby-starter-lamma.git"
+  },
+  "bugs": {
+    "url": "https://github.com/desktopofsamuel/gatsby-starter-lamma/issues"
+  },
+  "homepage": "https://github.com/desktopofsamuel/gatsby-starter-lamma#readme"
 }
