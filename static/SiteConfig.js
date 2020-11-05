@@ -53,6 +53,16 @@ const config = {
       path: "/features",
     },
   ],
+  secondarymenu: [
+    {
+      label: "Literature",
+      path: "/tags/literature",
+    },
+    {
+      label: "Tech",
+      path: "/categories/tech",
+    },
+  ],
 };
 
 // Validate

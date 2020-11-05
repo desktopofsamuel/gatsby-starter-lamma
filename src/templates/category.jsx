@@ -6,7 +6,8 @@ import PostListing from "../components/PostListing/PostListing";
 import config from "../../static/SiteConfig";
 
 const CategoryTemplate = ({ pageContext, data }) => {
-  const category = pageContext;
+  const { category } = pageContext;
+
   const postEdges = data.allMdx.edges;
   return (
     <Layout>
@@ -14,6 +15,7 @@ const CategoryTemplate = ({ pageContext, data }) => {
         <Helmet
           title={`Posts in category "${category}" | ${config.siteTitle}`}
         />
+        <h1>Posts in {category}</h1>
         <PostListing postEdges={postEdges} />
       </div>
     </Layout>
