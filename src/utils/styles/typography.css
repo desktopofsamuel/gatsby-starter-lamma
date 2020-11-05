@@ -17,8 +17,8 @@
   --font-size-xs: calc(var(--font-size-base) * 0.8 * var(--font-scale-ratio));
   --font-size-2xs: calc(var(--font-size-base) * 0.7 * var(--font-scale-ratio));
   --font-size-root: 100;
-  --font-size-base: 18px;
-  --font-size-small: 16px;
+  --font-size-base: 16px;
+  --font-size-small: 14px;
   --font-base-line-height: 1.5;
   --font-scale-ratio: 1;
   --font-small-letter-spacing: 0.1em;
