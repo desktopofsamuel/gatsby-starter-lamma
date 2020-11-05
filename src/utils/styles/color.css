@@ -18,13 +18,16 @@
   --color-dark-grey-shades-700: #9a9ea9;
   --color-white: #f7f7f8;
   --color-dark-background: #171717;
-  --color-light-background: #f7f7f7;
+  --color-dark-background-alt: #1f1f1f;
+  --color-light-background: #ffffff;
+  --color-light-background-alt: #f5f7f9;
   --color-black: #212121;
 }
 
 :root .dark-mode {
   --color-primary: var(--color-dark-primary);
   --color-background: var(--color-dark-background);
+  --color-background-alt: var(--color-dark-background-alt);
   --color-link: var(--color-white);
   --color-link-hover: var(--color-dark-grey-shades-300);
   --color-link-decoration: var(--color-dark-primary-100);
@@ -42,7 +45,8 @@
 
 :root .light-mode {
   --color-primary: var(--color-light-primary);
-  --color-background: var(--color-light-background);
+  --color-background: var(--color-light-background-alt);
+  --color-background-alt: var(--color-light-background);
   --color-link: var(--color-black);
   --color-link-hover: var(--color-light-grey-shades-700);
   --color-link-decoration: var(--color-light-primary-100);
