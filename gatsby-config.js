@@ -2,8 +2,11 @@ const urljoin = require("url-join");
 const path = require("path");
 const config = require("./static/SiteConfig");
 
+// Make sure that pathPrefix is not empty
+const validatedPathPrefix = config.pathPrefix === "" ? "/" : config.pathPrefix;
+
 module.exports = {
-  pathPrefix: config.pathPrefix === "" ? "/" : config.pathPrefix,
+  pathPrefix: validatedPathPrefix,
   siteMetadata: {
     siteUrl: urljoin(config.siteUrl, config.pathPrefix),
     rssMetadata: {

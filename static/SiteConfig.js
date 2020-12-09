@@ -4,7 +4,7 @@ const config = {
   siteTitleAlt: "Gatsby Starter Lamma", // Alternative site title for SEO.
   siteLogo: "/favicon.png", // Logo used for SEO and manifest.
   siteUrl: "https://gatsby-starter-lamma.netlify.app", // Domain of your website without pathPrefix.
-  pathPrefix: "/", // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
+  pathPrefix: "", // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
   siteDescription: "A GatsbyJS stater with Advanced design in mind.", // Website description used for RSS feeds/meta description tag.
   siteRss: "/rss.xml", // Path to the RSS file.
   siteRssTitle: "Gatsby Starter Lamma RSS feed", // Title of the RSS feed
