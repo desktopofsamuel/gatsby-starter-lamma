@@ -38,6 +38,10 @@ const Container = styled.main`
     display: block;
     padding: 0 16px;
   }
+
+  & > * {
+    max-width: 100%;
+  }
 `;
 
 export default class PostTemplate extends React.Component {
