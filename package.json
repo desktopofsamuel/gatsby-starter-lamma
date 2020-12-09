@@ -1,7 +1,7 @@
 {
   "name": "gatsby-starter-lamma",
   "description": "GatsbyJS starter that includes examples for advanced use cases.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "Samuel Wong <desktopofsamuel@gmail.com>",
   "dependencies": {
     "@mdx-js/mdx": "^1.6.6",
