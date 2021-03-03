@@ -44,43 +44,42 @@ const Container = styled.main`
   }
 `;
 
-export default class PostTemplate extends React.Component {
-  render() {
-    const { data, pageContext } = this.props;
-    const { slug } = pageContext;
-    const postNode = data.mdx;
-    const headings = postNode.headings;
-    const toc = postNode.tableOfContents;
-    const post = postNode.frontmatter;
-    if (!post.id) {
-      post.id = slug;
-    }
-    return (
-      <Layout>
-        <Helmet>
-          <title>{`${post.title} | ${config.siteTitle}`}</title>
-        </Helmet>
-        <SEO postPath={slug} postNode={postNode} postSEO />
-        <Grid>
-          <SocialLinks postPath={slug} postNode={postNode} />
-          <Container>
-            <h1>{post.title}</h1>
-            <small>
-              <time>{post.date}</time>
-            </small>
-            <MDXRenderer>{postNode.body}</MDXRenderer>
-            <div className="post-meta">
-              <PostTags tags={post.tags} />
-            </div>
-            {/* <Disqus postNode={postNode} /> */}
-          </Container>
-          <TableOfContents headings={headings} toc={toc} />
-          {/* <TOC2 /> */}
-        </Grid>
-      </Layout>
-    );
+const PostTemplate = ({ data, pageContext }) => {
+  const { slug } = pageContext;
+  const postNode = data.mdx;
+  const headings = postNode.headings;
+  const toc = postNode.tableOfContents;
+  const post = postNode.frontmatter;
+  if (!post.id) {
+    post.id = slug;
   }
-}
+  return (
+    <Layout>
+      <Helmet>
+        <title>{`${post.title} | ${config.siteTitle}`}</title>
+      </Helmet>
+      <SEO postPath={slug} postNode={postNode} postSEO />
+      <Grid>
+        <SocialLinks postPath={slug} postNode={postNode} />
+        <Container>
+          <h1>{post.title}</h1>
+          <small>
+            <time>{post.date}</time>
+          </small>
+          <MDXRenderer>{postNode.body}</MDXRenderer>
+          <div className="post-meta">
+            <PostTags tags={post.tags} />
+          </div>
+          {/* <Disqus postNode={postNode} /> */}
+        </Container>
+        <TableOfContents headings={headings} toc={toc} />
+        {/* <TOC2 /> */}
+      </Grid>
+    </Layout>
+  );
+};
+
+export default PostTemplate;
 
 /* eslint no-undef: "off" */
 export const pageQuery = graphql`

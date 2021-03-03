@@ -24,10 +24,10 @@ export default class TagTemplate extends React.Component {
 
 /* eslint no-undef: "off" */
 export const pageQuery = graphql`
-  query TagPage($tag: String) {
+  query TagPage($tag: String, $fields: [MdxFieldsEnum] = [frontmatter___date]) {
     allMdx(
       limit: 1000
-      sort: { fields: [fields___date], order: DESC }
+      sort: { order: DESC, fields: $fields }
       filter: { frontmatter: { tags: { in: [$tag] } } }
     ) {
       totalCount

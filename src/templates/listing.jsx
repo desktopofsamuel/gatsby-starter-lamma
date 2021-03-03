@@ -65,12 +65,12 @@ export default Listing;
 
 /* eslint no-undef: "off" */
 export const listingQuery = graphql`
-  query ListingQuery($skip: Int!, $limit: Int!) {
-    allMdx(
-      sort: { fields: [fields___date], order: DESC }
-      limit: $limit
-      skip: $skip
-    ) {
+  query ListingQuery(
+    $skip: Int!
+    $limit: Int!
+    $fields: [MdxFieldsEnum] = [frontmatter___date]
+  ) {
+    allMdx(sort: { order: DESC, fields: $fields }, limit: $limit, skip: $skip) {
       edges {
         node {
           fields {
