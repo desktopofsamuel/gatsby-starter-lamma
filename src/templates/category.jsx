@@ -26,10 +26,13 @@ export default CategoryTemplate;
 
 /* eslint no-undef: "off" */
 export const pageQuery = graphql`
-  query CategoryPage($category: String) {
+  query CategoryPage(
+    $category: String
+    $fields: [MdxFieldsEnum] = [frontmatter___date]
+  ) {
     allMdx(
       limit: 1000
-      sort: { fields: [fields___date], order: DESC }
+      sort: { order: DESC, fields: $fields }
       filter: { frontmatter: { category: { eq: $category } } }
     ) {
       totalCount

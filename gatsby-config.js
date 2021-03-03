@@ -127,80 +127,80 @@ module.exports = {
         includeRobots: false,
       },
     },
-    {
-      resolve: "gatsby-plugin-feed-mdx",
-      options: {
-        setup(ref) {
-          const ret = ref.query.site.siteMetadata.rssMetadata;
-          ret.allMdx = ref.query.allMdx;
-          ret.generator = "GatsbyJS Advanced Starter";
-          return ret;
-        },
-        query: `
-        {
-          site {
-            siteMetadata {
-              rssMetadata {
-                site_url
-                feed_url
-                title
-                description
-                image_url
-                copyright
-              }
-            }
-          }
-        }
-      `,
-        feeds: [
-          {
-            serialize(ctx) {
-              const { rssMetadata } = ctx.query.site.siteMetadata;
-              return ctx.query.allMdx.edges.map((edge) => ({
-                categories: edge.node.frontmatter.tags,
-                date: edge.node.fields.date,
-                title: edge.node.frontmatter.title,
-                description: edge.node.excerpt,
-                url: rssMetadata.site_url + edge.node.fields.slug,
-                guid: rssMetadata.site_url + edge.node.fields.slug,
-                custom_elements: [
-                  { "content:encoded": edge.node.html },
-                  { author: config.userEmail },
-                ],
-              }));
-            },
-            query: `
-            {
-              allMdx(
-                limit: 1000,
-                sort: { order: DESC, fields: [fields___date] },
-              ) {
-                edges {
-                  node {
-                    excerpt
-                    html
-                    timeToRead
-                    fields {
-                      slug
-                      date
-                    }
-                    frontmatter {
-                      title
-                      cover
-                      date
-                      category
-                      tags
-                    }
-                  }
-                }
-              }
-            }
-          `,
-            output: config.siteRss,
-            title: config.siteRssTitle,
-          },
-        ],
-      },
-    },
+    // {
+    //   resolve: "gatsby-plugin-feed",
+    //   options: {
+    //     setup(ref) {
+    //       const ret = ref.query.site.siteMetadata.rssMetadata;
+    //       ret.allMdx = ref.query.allMdx;
+    //       ret.generator = "GatsbyJS Advanced Starter";
+    //       return ret;
+    //     },
+    //     query: `
+    //     {
+    //       site {
+    //         siteMetadata {
+    //           rssMetadata {
+    //             site_url
+    //             feed_url
+    //             title
+    //             description
+    //             image_url
+    //             copyright
+    //           }
+    //         }
+    //       }
+    //     }
+    //   `,
+    //     feeds: [
+    //       {
+    //         serialize(ctx) {
+    //           const { rssMetadata } = ctx.query.site.siteMetadata;
+    //           return ctx.query.allMdx.edges.map((edge) => ({
+    //             categories: edge.node.frontmatter.tags,
+    //             date: edge.node.fields.date,
+    //             title: edge.node.frontmatter.title,
+    //             description: edge.node.excerpt,
+    //             url: rssMetadata.site_url + edge.node.fields.slug,
+    //             guid: rssMetadata.site_url + edge.node.fields.slug,
+    //             custom_elements: [
+    //               { "content:encoded": edge.node.html },
+    //               { author: config.userEmail },
+    //             ],
+    //           }));
+    //         },
+    //         query: `
+    //         {
+    //           allMdx(
+    //             limit: 1000,
+    //             sort: { order: DESC, fields: [fields___date] },
+    //           ) {
+    //             edges {
+    //               node {
+    //                 excerpt
+    //                 html
+    //                 timeToRead
+    //                 fields {
+    //                   slug
+    //                   date
+    //                 }
+    //                 frontmatter {
+    //                   title
+    //                   cover
+    //                   date
+    //                   category
+    //                   tags
+    //                 }
+    //               }
+    //             }
+    //           }
+    //         }
+    //       `,
+    //         output: config.siteRss,
+    //         title: config.siteRssTitle,
+    //       },
+    //     ],
+    //   },
+    // },
   ],
 };

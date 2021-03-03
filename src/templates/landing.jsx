@@ -7,30 +7,28 @@ import SEO from "../components/SEO/SEO";
 import config from "../../static/SiteConfig";
 import Hero from "../components/Hero/Hero";
 
-class Landing extends React.Component {
-  render() {
-    const postEdges = this.props.data.allMdx.edges;
-    return (
-      <Layout>
-        <div className="landing-container">
-          <div className="posts-container">
-            <Helmet title={config.siteTitle} />
-            <SEO />
-            <Hero />
-            <PostListing postEdges={postEdges} />
-          </div>
+const Landing = ({ data }) => {
+  const postEdges = data.allMdx.edges;
+  return (
+    <Layout>
+      <div className="landing-container">
+        <div className="posts-container">
+          <Helmet title={config.siteTitle} />
+          <SEO />
+          <Hero />
+          <PostListing postEdges={postEdges} />
         </div>
-      </Layout>
-    );
-  }
-}
+      </div>
+    </Layout>
+  );
+};
 
 export default Landing;
 
 /* eslint no-undef: "off" */
 export const pageQuery = graphql`
-  query LandingQuery {
-    allMdx(sort: { fields: [fields___date], order: DESC }) {
+  query LandingQuery($fields: [MdxFieldsEnum] = [frontmatter___date]) {
+    allMdx(sort: { order: DESC, fields: $fields }) {
       edges {
         node {
           fields {
