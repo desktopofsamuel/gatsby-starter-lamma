@@ -1,3 +1,5 @@
+![Cover photo for Gatsby Starter Lamma](https://user-images.githubusercontent.com/35249407/121767665-3d587780-cb8c-11eb-869e-cf0465a5610b.png)
+
 # Gatsby Starter Lamma
 
 A minimal dark themed blog based on [Gatsby Advance Starter](https://github.com/Vagr9K/gatsby-advanced-starter).
@@ -18,7 +20,7 @@ A minimal dark themed blog based on [Gatsby Advance Starter](https://github.com/
 
 ---
 
-:heart: this starter? Give me a star on [Github](https://github.com/desktopofsamuel/gatsby-starter-lamma) or [share](http://twitter.com/share?text=Check this out&url=https://github.com/desktopofsamuel/gatsby-starter-lamma) it! 
+:heart: this starter? Give me a star on [Github](https://github.com/desktopofsamuel/gatsby-starter-lamma) or [share](http://twitter.com/share?url=https://github.com/desktopofsamuel/gatsby-starter-lamma) it! 
 
 ## Features
 
