@@ -4,7 +4,6 @@
 
 A minimal dark themed blog based on [Gatsby Advance Starter](https://github.com/Vagr9K/gatsby-advanced-starter).
 
-
 <div style="display: grid, gap: 20px">
  <img src="https://img.shields.io/github/issues/desktopofsamuel/gatsby-starter-lamma" alt="Logo">
  <img src="https://img.shields.io/github/license/desktopofsamuel/gatsby-starter-lamma" alt="Logo">
@@ -20,11 +19,12 @@ A minimal dark themed blog based on [Gatsby Advance Starter](https://github.com/
 
 ---
 
-:heart: this starter? Give me a star on [Github](https://github.com/desktopofsamuel/gatsby-starter-lamma) or [share](http://twitter.com/share?url=https://github.com/desktopofsamuel/gatsby-starter-lamma) it! 
+:heart: this starter? Give me a star on [Github](https://github.com/desktopofsamuel/gatsby-starter-lamma) or [share](http://twitter.com/share?url=https://github.com/desktopofsamuel/gatsby-starter-lamma) it!
 
 ## Features
 
-- Gatsby v2 + MDX
+- Gatsby v3 support
+- MDX
 - Dark Mode (Implemented with CSS Variables with [gatsby-plugin-use-dark-mode](https://github.com/wKovacs64/gatsby-plugin-use-dark-mode) and [react-dark-mode-toggle](https://github.com/cawfree/react-dark-mode-toggle))
 - Subtle Table Of Content Component for every blog post
 - Customized menu (Mobile support coming soon!)
@@ -33,14 +33,16 @@ A minimal dark themed blog based on [Gatsby Advance Starter](https://github.com/
 ## Lighthouse Audit Score
 
 ## Roadmap
-- [x] Dark Mode
-- [] Mobile Navigation Bar
-- [] Photo Portfolio Support
 
+- [x] Dark Mode
+- [ ] Mobile Navigation Bar
+- [ ] Photo Portfolio Support
 
 ## Getting Started
+
 TBC
 
 ## Author
 
-Samuel Wong ([@desktopofsamuel](https://twitter.com/desktopofsamuel)) for [Gatsby Starter Lamma](https://github.com/desktopofsamuel/gatsby-starter-lamma), forked from [Gatsby Advance Starter](https://github.com/Vagr9K/gatsby-advanced-starter) by Ruben Harutyunyan ([@Vagr9K](https://twitter.com/Vagr9K))
+Samuel Wong ([@desktopofsamuel](https://twitter.com/desktopofsamuel)) for [Gatsby Starter Lamma](https://github.com/desktopofsamuel/gatsby-starter-lamma)
+forked from [Gatsby Advance Starter](https://github.com/Vagr9K/gatsby-advanced-starter) by Ruben Harutyunyan ([@Vagr9K](https://twitter.com/Vagr9K))

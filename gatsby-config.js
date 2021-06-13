@@ -173,7 +173,7 @@ module.exports = {
     //         {
     //           allMdx(
     //             limit: 1000,
-    //             sort: { order: DESC, fields: [fields___date] },
+    //         y    sort: { order: DESC, fields: [fields___date] },
     //           ) {
     //             edges {
     //               node {
